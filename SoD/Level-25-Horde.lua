@@ -52,7 +52,7 @@ RXPGuides.RegisterGuide([[
 #classic
 << Horde
 #name 3-Launch Day Turn-in Route
-#version 2
+#version 3
 #group Quest Stacking SoD Level 25
 
 step
@@ -62,7 +62,7 @@ step
 
 -- THOUSAND NEEDLES --
 step
-    #completewith thousandneedles
+    #completewith thousandneedles1
     .zone Thousand Needles >>Head to Whitereach Post in Thousand Needles
 
 -- Whitereach Post --
@@ -123,7 +123,7 @@ step
     .goto Thousand Needles,45.6,50.6
     .target Cliffwatcher Longhorn
 step
-    #label thousandneedles
+    #label thousandneedles1
     .isOnQuest 4767
     >>Talk to |cRXP_FRIENDLY_Elu|r in Freewind Post
     .turnin 4767 >>Turn in Wind Rider
@@ -137,7 +137,7 @@ step
 
 -- THE BARRENS --
 step
-    #completewith thebarrens
+    #completewith thebarrens1
     .zone The Barrens >>Head to Camp Taurajo in The Barrens
 
 -- Camp Taurajo --
@@ -223,6 +223,7 @@ step
     .goto The Barrens,44.6,59.2
     .target Mangletooth
 step
+    #completewith ratchet1
     .fly Ratchet
     .goto The Barrens,44.4,59.0
     .target Omusa Thunderhorn
@@ -265,12 +266,14 @@ step
     .accept 6981 >>Accept Glowing Shard
     .goto The Barrens,63.0,37.2
 step
+    #label ratchet1
     .isOnQuest 6981
     >>Talk to |cRXP_FRIENDLY_Sputtervalve|r in Ratchet
     .complete 6981,1 >>The Glowing Shard
     .goto The Barrens,63.0,37.2
     .target Sputtervalve
 step
+    #completewith thebarrens1
     .fly Crossroads
     .goto The Barrens,63.0,37.2
     .target Bragok
@@ -320,7 +323,7 @@ step
     .goto The Barrens,51.4,30.2
     .target Apothecary Helbrim
 step
-    #label thebarrens
+    #label thebarrens1
     >>Talk to |cRXP_FRIENDLY_Thork|r in the Crossroads
     .accept 6541 >>Accept Report to Kadrak
     .goto The Barrens,51.6,30.8
@@ -333,7 +336,7 @@ step
 
 -- MULGORE / THUNDER BLUFF --
 step
-    #completewith thunderbluff
+    #completewith thunderbluff1
     .zone Thunder Bluff >>Head to Thunder Bluff in Mulgore
 step
     .isOnQuest 853
@@ -350,10 +353,6 @@ step
 step
     >>Talk to |cRXP_FRIENDLY_Rumstag Proudstrider|r in Thunder Bluff
     .turnin 7820 >>Turn in A Donation of Wool
-    .goto Thunder Bluff,43.8,42.2
-    .target Rumstag Proudstrider
-step
-    >>Talk to |cRXP_FRIENDLY_Rumstag Proudstrider|r in Thunder Bluff
     .turnin 7821 >>Turn in A Donation of Silk
     .goto Thunder Bluff,43.8,42.2
     .target Rumstag Proudstrider
@@ -394,7 +393,7 @@ step
     .goto Thunder Bluff,80.6,30.6
     .target Horde Warbringer
 step
-    #label thunderbluff    
+    #label thunderbluff1
     .goto Thunder Bluff,47.12,57.88
     .target Chesmu
     >>Talk to |cRXP_FRIENDLY_Chesmu|r in Thunder Bluff
@@ -408,28 +407,20 @@ step << !Mage
 
 -- ORGRIMMAR --
 step
-    #completewith orgrimmar
+    #completewith orgrimmar1
     .zone Orgrimmar >>Head to Orgrimmar << !Mage
     .zone Orgrimmar >>Teleport to Orgrimmar << Mage
 step
     >>Talk to |cRXP_FRIENDLY_Rashona Straglash|r The Drag
     .turnin 7826 >>A Donation of Wool
+    .turnin 7827 >>A Donation of Silk
     .goto Orgrimmar,63.6,51.0
     .target Rashona Straglash
 step
-    >>Talk to |cRXP_FRIENDLY_Rashona Straglash|r The Drag
-    .turnin  >>A Donation of Silk
-    .goto Orgrimmar,63.6,51.0
-    .target Rashona Straglash
-step
+    #label orgrimmar1
     >>Talk to |cRXP_FRIENDLY_Vehena|r The Valley of Spirits
     .turnin 7833 >>A Donation of Wool
-    .goto Orgrimmar,37.8,87.6
-    .target Vehena
-step
-    #label orgrimmar
-    >>Talk to |cRXP_FRIENDLY_Vehena|r The Valley of Spirits
-    .turnin  >>A Donation of Silk
+    .turnin 7834 >>A Donation of Silk
     .goto Orgrimmar,37.8,87.6
     .target Vehena
 step
@@ -440,7 +431,7 @@ step
 
 -- ASHENVALE --
 step
-    #completewith ashenvale
+    #completewith ashenvale1
     .zone Ashenvale >>Head to Ashenvale
 step
     .isOnQuest 6441
@@ -471,12 +462,12 @@ step
     >>Use the Silverwing Sentinel Charm to Accept the quest
     .use 211813
     .accept 79098 >>Accept Clear the Forest!
-    .goto Ashenvale,39.6,67.6
+    .goto Ashenvale,74.0,60.6
 step
     .isOnQuest 79098
     >>Talk to |cRXP_FRIENDLY_Kazragore|r in Ashenvale
     .turnin 79098 >>Turn in Clear the Forest!
-    .goto Ashenvale,39.6,67.6
+    .goto Ashenvale,74.0,60.6
     .target Kazragore
 step
     .isOnQuest 6482
@@ -598,7 +589,7 @@ step
     .goto The Barrens,48.0,5.4
     .target Kadrak
 step
-    #completewith next
+    #completewith ashenvale1
     .fly Zoram'Gar Outpost
     .goto Ashenvale,73.2,61.6
     .target Vhulgra
@@ -645,7 +636,7 @@ step
     .goto Ashenvale,11.8,34.4
     .target Karang Amakkar
 step
-    #label ashenvale
+    #label ashenvale1
     .isOnQuest 6641
     >>Talk to |cRXP_FRIENDLY_Warsong Runner|r at Zoram'Gar Outpost
     .turnin 6641 >>Turn in Vorsha the Lasher
@@ -657,7 +648,7 @@ step
 
 -- SILVERPINE FOREST --
 step
-    #completewith silverpine
+    #completewith silverpine1
     .zone Silverpine Forest >>Head to Silverpine Forest
 step
     .isOnQuest 1014
@@ -672,7 +663,7 @@ step
     .goto Silverpine Forest,43.4,40.8
     .target High Executor Hadrec
 step
-    #label silverpine
+    #label silverpine1
     >>Talk to |cRXP_FRIENDLY_Apothecary Renferrel|r at The Sepulcher
     .accept 493 >>Accpet Journey to Hillsbrad Foothills
     .goto Silverpine Forest,42.8,40.8
@@ -685,7 +676,7 @@ step
 
 -- HILLSBRAD FOOTHILLS --
 step
-    #completewith hillsbrad
+    #completewith hillsbrad1
     .zone Hillsbrad Foothills >>Head to Hillsbrad Foothills
 step
     .isOnQuest 1065
@@ -749,7 +740,6 @@ step
     .accept 499 >>Accept Elixir of Suffering
     .turnin 499 >>Turn in Elixir of Suffering
 step
-    -- level 28
     .itemcount 3712,10
     >>|cRXP_WARN_NOTE|r: You must be level 28 to accept this quest
     .goto Hillsbrad Foothills,62.2,19.0
@@ -765,7 +755,7 @@ step
     .turnin 524 >>Turn in Elixir of Agony
     .goto Hillsbrad Foothills,62.8,18.8
 step
-    #label hillsbrad
+    #label hillsbrad1
     .isQuestTurnedIn 541
     >>Talk to |cRXP_FRIENDLY_High Executor Darthalia|r in Tarren Mill
     .accept 550 >>Battle of Hillsbrad
@@ -779,7 +769,7 @@ step << !Mage
 
 -- UNDERCITY --
 step
-    #completewith undercity
+    #completewith undercity1
     .zone Undercity >>Head to Undercity << !Mage
     .zone Undercity >>Teleport to Undercity << Mage
 step    
@@ -796,10 +786,6 @@ step
 step
     >>Talk to |cRXP_FRIENDLY_Ralston Farnsley|r in Undercity
     .turnin 7813 >>A Donation of Wool
-    .goto Undercity,71.8,29.0
-    .target Ralston Farnsley
-step
-    >>Talk to |cRXP_FRIENDLY_Ralston Farnsley|r in Undercity
     .turnin 7814 >>A Donation of Silk
     .goto Undercity,71.8,29.0
     .target Ralston Farnsley
@@ -816,7 +802,13 @@ step
     .goto Undercity,56.2,92.6
     .target Varimathras
 step
-    #label undercity
+    .isOnQuest 1013
+    .goto Undercity,53.6,54
+    .target Keeper Bel'dugur
+    >>Talk to |cRXP_FRIENDLY_Keeper Bel'dugur|r in The Apothecarium
+    .turnin 1013 >>Turn in The Book of Ur
+step
+    #label undercity1
     .isOnQuest 550
     >>Talk to |cRXP_FRIENDLY_Varimathras|r in Undercity
     .turnin 550 >>Turn in Battle of Hillsbrad

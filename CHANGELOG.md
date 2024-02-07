@@ -1,6 +1,8 @@
 # Changelog
 
 ## Versions
+### 1.1.1
+- Horde Turn-in Route updates
 
 ### 1.1.0
 - Alliance Collection Route (v2)
