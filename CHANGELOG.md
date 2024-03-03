@@ -1,8 +1,11 @@
 # Changelog
 
 ## Versions
+### 1.2.0
+- Add Cozy sleeping bag route for Horde (v1)
+
 ### 1.1.1
-- Horde Turn-in Route updates
+- Horde Turn-in Route updates (v3)
 
 ### 1.1.0
 - Alliance Collection Route (v2)

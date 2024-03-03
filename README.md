@@ -7,6 +7,7 @@ The guides in this addon require [RestedXP's][1] base addon. RestedXP's base add
 
 - Level 25 Collection and Turn-in Guides for Alliance
 - Level 25 Turn-in Guide for the Horde
+- Cozy Sleeping Bag route for Horde
 
 ## Installation
 Download the latest release on [Curseforge][2].
