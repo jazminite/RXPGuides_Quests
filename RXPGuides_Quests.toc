@@ -7,9 +7,10 @@
 ## Title: RestedXP Quests
 ## Notes: In-game quest stacking
 ## Author: Jazminite
-## Version: 1.1.1
+## Version: 1.2.0
 
 ## Dependencies: RXPGuides
 
+SoD/Extras.lua
 SoD/Level-25-Alliance.lua
 SoD/Level-25-Horde.lua
