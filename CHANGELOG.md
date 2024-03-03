@@ -1,6 +1,9 @@
 # Changelog
 
 ## Versions
+### 1.2.1
+- Add Cozy sleeping bag route for Alliance (v1)
+
 ### 1.2.0
 - Add Cozy sleeping bag route for Horde (v1)
 
