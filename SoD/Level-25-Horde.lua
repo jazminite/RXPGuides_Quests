@@ -1,10 +1,12 @@
 RXPGuides.RegisterGuide([[
 #classic
+#version 3
 << Horde
-#name 1-How to Use this Guide
-#version 2
-#group Quest Stacking SoD Level 25
-#next 2-Pre-Launch Collection Guide
+#group Custom Quests for RXP
+#subgroup SoD Level 25 Quest Stacking
+#name 25-1-How to Use this Guide
+#displayname 1-How to Use this Guide
+#next 25-2-Pre-Launch Collection Guide
 
 -- |cRXP_FRIENDLY_, |cRXP_ENEMY_, |cRXP_LOOT_, |cRXP_WARN_, |cRXP_PICK_, |cRXP_BUY_
 -- |c99ffff99 OR|r
@@ -18,11 +20,13 @@ step
 
 RXPGuides.RegisterGuide([[
 #classic
+#version 3
 << Horde
-#name 2-Pre-Launch Collection Guide
-#version 2
-#group Quest Stacking SoD Level 25
-#next 3-Launch Day Turn-in Route
+#group Custom Quests for RXP
+#subgroup SoD Level 25 Quest Stacking
+#name 25-2-Pre-Launch Collection Guide
+#displayname 2-Pre-Launch Collection Guide
+#next 25-3-Launch Day Turn-in Route
 
 step
     .maxlevel 19
@@ -50,10 +54,12 @@ step
 
 RXPGuides.RegisterGuide([[
 #classic
+#version 4
 << Horde
-#name 3-Launch Day Turn-in Route
-#version 3
-#group Quest Stacking SoD Level 25
+#group Custom Quests for RXP
+#subgroup SoD Level 25 Quest Stacking
+#name 25-3-Launch Day Turn-in Route
+#displayname 3-Launch Day Turn-in Route
 
 step
     .xp 25 >>You must be level 25 to utilize this guide!

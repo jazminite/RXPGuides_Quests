@@ -2,8 +2,9 @@ RXPGuides.RegisterGuide([[
 #classic
 << Alliance
 #name Cozy Sleeping Bag
-#version 1
-#group Quest Stacking SoD Extras
+#version 2
+#group Custom Quests for RXP
+#subgroup SoD Extras
 
 -- |cRXP_FRIENDLY_, |cRXP_ENEMY_, |cRXP_LOOT_, |cRXP_WARN_, |cRXP_PICK_, |cRXP_BUY_
 -- |c99ffff99 OR|r
@@ -101,8 +102,9 @@ RXPGuides.RegisterGuide([[
 #classic
 << Horde
 #name Cozy Sleeping Bag
-#version 1
-#group Quest Stacking SoD Extras
+#version 2
+#group Custom Quests for RXP
+#subgroup SoD Extras
 
 -- |cRXP_FRIENDLY_, |cRXP_ENEMY_, |cRXP_LOOT_, |cRXP_WARN_, |cRXP_PICK_, |cRXP_BUY_
 -- |c99ffff99 OR|r
