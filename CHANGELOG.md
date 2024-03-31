@@ -1,6 +1,11 @@
 # Changelog
 
 ## Versions
+### 1.3.0
+- Rearrange menu categories
+- Add Level 40 placeholder guides (v1)
+- Start Alliance P3 Collection Guide (v1)
+
 ### 1.2.1
 - Add Cozy sleeping bag route for Alliance (v1)
 

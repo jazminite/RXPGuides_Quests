@@ -1,12 +1,15 @@
 # RestedXP Custom Quest Guides
 The guides in this addon require [RestedXP's][1] base addon. RestedXP's base addon is FREE to download.
 
-## Guides
+## Custom Quest Guides
 
 ### Season of Discovery Quest Stacking
 
 - Level 25 Collection and Turn-in Guides for Alliance
 - Level 25 Turn-in Guide for the Horde
+- Level 40 Guides Work-in-Progress (no guarantees)
+
+### Season of Discovery Extras
 - Cozy Sleeping Bag route for Alliance & Horde
 
 ## Installation

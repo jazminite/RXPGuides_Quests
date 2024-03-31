@@ -1,10 +1,12 @@
 RXPGuides.RegisterGuide([[
 #classic
+#version 3
 << Alliance
-#name 1-How to Use this Guide
-#version 2
-#group Quest Stacking SoD Level 25
-#next 2-Pre-Launch Collection Guide
+#group Custom Quests for RXP
+#subgroup SoD Level 25 Quest Stacking
+#name 25-1-How to Use this Guide
+#displayname 1-How to Use this Guide
+#next 25-2-Pre-Launch Collection Guide
 
 -- |cRXP_FRIENDLY_, |cRXP_ENEMY_, |cRXP_LOOT_, |cRXP_WARN_, |cRXP_PICK_, |cRXP_BUY_
 -- |c99ffff99 OR|r
@@ -18,24 +20,25 @@ step
 
 RXPGuides.RegisterGuide([[
 #classic
+#version 3
 << Alliance
-#name 2-Pre-Launch Collection Guide
-#version 2
-#group Quest Stacking SoD Level 25
-#next 3-Launch Day Turn-in Route
+#group Custom Quests for RXP
+#subgroup SoD Level 25 Quest Stacking
+#name 25-2-Pre-Launch Collection Guide
+#displayname 2-Pre-Launch Collection Guide
+#next 25-3-Launch Day Turn-in Route
 
 step
-    #level 20
+    .maxlevel 19
+    >>|cRXP_WARN_NOTE|r: This guide is for |cRXP_WARN_HIGHER LEVEL|r characters.
+    .xp 20
+step
     >>|cRXP_WARN_LEVEL 25 ALLIANCE QUEST STACK|r
     >>This guide is for collection prior to launch day.
     +Only turn-in specified quests in this guide.
     +Other quests are left in your quest log for launch day.
     >>|cRXP_WARN_NOTE|r: This is an |cRXP_PICK_EXPERIMENTAL|r route. For more details, check
     .link https://www.patreon.com/joardee >>Joardee's Patreon spreadsheet
-step
-    .maxlevel 19
-    >>|cRXP_WARN_NOTE|r: This guide is for |cRXP_WARN_HIGHER LEVEL|r characters.
-    .xp 20
 step
     >>|cRXP_WARN_WARNING PLEASE READ CAREFULLY!!!!|r
     >>Many quest addons auto-turn-in quests (INCLUDING THIS ONE).
@@ -1729,10 +1732,12 @@ step
 
 RXPGuides.RegisterGuide([[
 #classic
+#version 3
 << Alliance
-#name 3-Launch Day Turn-in Route
-#version 2
-#group Quest Stacking SoD Level 25
+#group Custom Quests for RXP
+#subgroup SoD Level 25 Quest Stacking
+#name 25-3-Launch Day Turn-in Route
+#displayname 3-Launch Day Turn-in Route
 
 step
     +|cRXP_WARN_WARNING: ONLY LOAD THIS GUIDE ON LAUNCH DAY, DO NOT ACCIDENTALLY TURN IN YOUR PRE QUESTS|r
