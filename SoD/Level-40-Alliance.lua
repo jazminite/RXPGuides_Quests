@@ -20,7 +20,7 @@ step
 
 RXPGuides.RegisterGuide([[
 #classic
-#version 1
+#version 2
 << Alliance
 #group Custom Quests for RXP
 #subgroup SoD Level 40 Quest Stacking
@@ -46,6 +46,18 @@ step
     +|cRXP_PICK_I understand|r
     >>|cRXP_WARN_PRO TIP|r: Store turn-in items in the bank to prevent accidental turn-in.
 
+-- PROFESSIONS --
+step
+    .train 2550 >>Train Cooking
+    +Level your cooking to 225
+    >>You will need it leveled for a breadcrumb quest
+    .skill cooking,225,1
+step
+    .train 3273 >> Train First Aid
+    +Level your first aid to 225
+    >>You will need it leveled for a breadcrumb quest
+    .skill firstaid,225,1
+
 -- ARATHI HIGHLANDS #1 --
 step
     .goto Arathi Highlands,62.5,33.8
@@ -60,7 +72,7 @@ step
     .mob Drywhisker Digger
     .mob Drywhisker Surveyor
 step
-    .goto Arathi Highlands 80,40,5,0
+    .goto Arathi Highlands,80,40,5,0
     .goto Arathi Highlands,84.3,30.9
     .target Iridescent Shards
     >>Click the |cRXP_FRIENDLY_Iridescent Shards|r in the cave East of Hammerfall
@@ -106,13 +118,23 @@ step
 
 -- BADLANDS #1 --
 step
+    .goto Badlands,53.0,34.1
+    >>Click the |cRXP_FRIENDLY_Crumpled Map|r at Hammertoe's Digsite
+    .accept 720 >>Accept A Sign of Hope
+step
+    .goto Badlands,53.4,43.6
+    .target Prospector Ryedol
+    >>Talk to |cRXP_FRIENDLY_Prospector Ryedol|r in the Badlands
+    .turnin 720 >>Turn in A Sign of Hope
+    .accept 721 >>Accept A Sign of Hope
+step
     .goto Badlands,53.8,43.6
     .target Sigrun Ironhew
     >>Talk to |cRXP_FRIENDLY_Sigrun Ironhew|r in the Badlands
     .accept 718 >>Accept Mirages
 step
-    .goto Badlands,66.5,21.6
-    >>Loot the |cRXP_LOOT_Supply Crate|r from the Excavation Supply Crate at the Uldaman excavation site
+    .goto Badlands,66.89,23.45
+    >>Loot the |cRXP_LOOT_Supply Crate|r from the Excavation Supply Crate at Camp Kosh
     .complete 718,1 >>Mirages
 step
     .goto Badlands,53.8,43.6
@@ -145,9 +167,32 @@ step
     .complete 692,3
     .mob Enraged Rock Elemental
 step
-    .goto Badlands,54.11,58.13
-    >>Loot the |cRXP_LOOT_Tablet of Ryun'eh|r from the Ancient Chest in the Sealed Hall outside the Uldaman instance
+    .goto Badlands,37.94,10.53
+    .target Hammertoe Grez
+    >>Talk to |cRXP_FRIENDLY_Hammertoe Grez|r in the Uldaman cave (outside the instance)
+    .turnin 721 >>Turn in A Sign of Hope
+    .accept 722 >>Accept Amulet of Secrets
+step
+    .goto Eastern Kingdoms,54.14,58.22
+    >>Loot the |cRXP_LOOT_Tablet of Ryun'eh|r from the Ancient Chest in the Sealed Hall (outside the instance)
     .complete 709,1 >>Solution to Doom
+step
+    .goto Eastern Kingdoms,54.14,58.22
+    >>Kill |cRXP_ENEMY_Magregan Deepshadow|r in the Sealed Hall (outside the instance) for |cRXP_LOOT_Hammertoe's Amulet|r
+    .complete 722,1 >>Amulet of Secrets
+    .unitscan Magregan Deepshadow
+step
+    .goto Badlands,37.94,10.53
+    .target Hammertoe Grez
+    >>Talk to |cRXP_FRIENDLY_Hammertoe Grez|r in the Uldaman cave (outside the instance)
+    .turnin 722 >>Turn in Amulet of Secrets
+    .accept 723 >>Accept Prospect of Faith
+step
+    .goto Badlands,53.4,43.6
+    .target Prospector Ryedol
+    >>Talk to |cRXP_FRIENDLY_Prospector Ryedol|r in the Badlands
+    .turnin 723 >>Turn in Prospect of Faith
+    >>|cRXP_WARN_DON'T ACCEPT THE NEXT QUEST - THIS IS YOUR BREADCRUMB.|r
 step
     #label badlands1
     .goto Badlands,51.4,76.8
@@ -217,7 +262,7 @@ step
 -- ARATHI HIGHLANDS #2 --
 step
     .goto Arathi Highlands,62.6,34.6
-    .use4472
+    .use 4472
     >>Summon and Kill |cRXP_ENEMY_Myzrael|r in Arathi Highlands for the |cRXP_LOOT_Eldritch Shackles|r
     .complete 656,1 >>Summoning the Princess
     .mob Myzrael
@@ -290,11 +335,21 @@ step
     .mob Mirefin Oracle
 step
     .goto Dustwallow Marsh,59.4,9.6
-    .use4639
+    .use 4639
     >>Summon and Kill |cRXP_ENEMY_Dagun the Ravenous|r in Dustwallow Marsh for the |cRXP_LOOT_Hand of Dagun|r
     .complete 735,2 >>The Star, The Hand, and the Heart
     .unitscan Dagun the Ravenous
     >>|cRXP_WARN_SAVE THIS QUEST FOR LAUNCH DAY TURN-IN|r
+step
+    .goto Dustwallow Marsh,29.8,48.2
+    >>Click the |cRXP_FRIENDLY_Theramore Guard Badge|r in Dustwallow Marsh
+    .accept 1252 >>Accept Lieutenant Paval Reethe
+step
+    .goto Dustwallow Marsh,68.2,48.6
+    .target Captain Garran Vimes
+    >>Talk to |cRXP_FRIENDLY_Captain Garran Vimes|r in Theramore
+    .turnin 1252 >>Turn in Lieutenant Paval Reethe
+    >>|cRXP_WARN_DON'T ACCEPT THE NEXT QUEST - THIS IS YOUR BREADCRUMB.|r
 
 -- TANARIS #1 --
 step
