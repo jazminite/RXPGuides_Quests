@@ -1,6 +1,9 @@
 # Changelog
 
 ## Versions
+### 1.5.0
+- Alliance P3 Turn-In Route (v2)
+
 ### 1.4.0
 - Updates for Alliance P3 Collection Guide (v2)
 - Horde P3 Turn-In Route (v2)

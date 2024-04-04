@@ -8,7 +8,7 @@ The guides in this addon require [RestedXP's][1] base addon. RestedXP's base add
 - Level 25 Collection and Turn-in Guides for Alliance
 - Level 25 Turn-in Guide for the Horde
 - Level 40 Turn-in Guide for the Horde
-- Level 40 Other Guides Work-in-Progress (no guarantees)
+- Level 40 Turn-in Guide for the Alliance (partial)
 
 ### Season of Discovery Extras
 - Cozy Sleeping Bag route for Alliance & Horde
