@@ -464,7 +464,7 @@ step
 
 RXPGuides.RegisterGuide([[
 #classic
-#version 1
+#version 2
 << Alliance
 #group Custom Quests for RXP
 #subgroup SoD Level 40 Quest Stacking
@@ -472,9 +472,494 @@ RXPGuides.RegisterGuide([[
 #displayname 3-Launch Day Turn-in Route
 
 step
+    #sticky
     +|cRXP_WARN_WARNING: ONLY LOAD THIS GUIDE ON LAUNCH DAY, DO NOT ACCIDENTALLY TURN IN YOUR PRE QUESTS|r
 step
     >>|cRXP_WARN_LEVEL 40 ALLIANCE QUEST STACK|r
-    >>There is no guarantee an RXP turn-in guide will be available before Phase 3 launch.
-    +Check back later for updates
+    >>This is a community guide that may have ERRORS.
+    >>I recommend testing on the PTR prior to Phase 3 launch.
+    +|cRXP_PICK_I understand|r
+step
+    .isOnQuest 2781
+    .goto Tanaris,52.4,28.4
+    .target Chief Engineer Bilgewhizzle
+    >>Talk to |cRXP_FRIENDLY_Chief Engineer Bilgewhizzle|r in Gadgetzan
+    .turnin 2781 >>Turn in Wanted: Caliph Scorpidsting
+step
+    .isOnQuest 10
+    .goto Tanaris,50.2,27.4
+    .target Senior Surveyor Fizzledowser
+    >>Talk to |cRXP_FRIENDLY_Senior Surveyor Fizzledowser|r in Gadgetzan
+    .turnin 10 >>Turn in The Scrimshank Redemption
+step
+    .itemcount 12207,12
+    .itemcount 7974,10
+    .itemcount 8932,20
+    .goto Tanaris,52.6,28.0
+    .target Dirge Quikcleave
+    >>Talk to |cRXP_FRIENDLY_Dirge Quikcleave|r in Gadgetzan
+    .accept 6610 >>Accept Clamlette Surprise
+    .turnin 6610 >>Turn in Clamlette Surprise
+step
+    .isOnQuest 1691
+    .goto Tanaris,52.4,28.4
+    .target Chief Engineer Bilgewhizzle
+    >>Talk to |cRXP_FRIENDLY_Chief Engineer Bilgewhizzle|r in Gadgetzan
+    .turnin 1691 >>Turn in More Wastewander Justice
+step
+    .itemcount 8483,5
+    .goto Tanaris,52.4,28.4
+    .target Spigot Operator Luglunket
+    >>Talk to |cRXP_FRIENDLY_Spigot Operator Luglunket|r in Gadgetzan
+    .accept 1707 >>Accept Water Pouch Bounty
+    .turnin 1707 >>Turn in Water Pouch Bounty
+step
+    .fly in Feathermoon Stronghold
+    .goto Tanaris,51.0,29.2
+    .target Bera Stonehammer
+step
+    .isOnQuest 4265
+    .goto Feralas,31.8,45.2
+    .target Ginro Hearthkindle
+    >>Talk to |cRXP_FRIENDLY_Ginro Hearthkindle|r in Feathermoon Stronghold
+    .turnin 4265 >>Turn in Freed from the Hive
+step
+    .isQuestTurnedIn 4265
+    .goto Feralas,31.8,45.2
+    .target Ginro Hearthkindle
+    >>Talk to |cRXP_FRIENDLY_Ginro Hearthkindle|r in Feathermoon Stronghold
+    .accept 4266 >>Accept A Hero's Welcome
+step
+    .isOnQuest 4266
+    .goto Feralas,30.2,46.0
+    .target Shandris Feathermoon
+    >>Talk to |cRXP_FRIENDLY_Shandris Feathermoon|r in Feathermoon Stronghold
+    .turnin 4266 >>Turn in A Hero's Welcome
+step
+    .isQuestTurnedIn 4266
+    .goto Feralas,30.2,46.0
+    .target Shandris Feathermoon
+    >>Talk to |cRXP_FRIENDLY_Shandris Feathermoon|r in Feathermoon Stronghold
+    .accept 4267 >>Accept Rise of the Silithid
+step
+    .isQuestTurnedIn 2870
+    .goto Feralas,30.4,46.0
+    .target Latronicus Moonspear
+    >>Talk to |cRXP_FRIENDLY_Latronicus Moonspear|r in Feathermoon Stronghold
+    .accept 2871 >>Accept Delivering the Relic
+step
+    .isOnQuest 2871
+    .goto Feralas,30.0,45.0
+    .target Vestia Moonspear
+    >>Talk to |cRXP_FRIENDLY_Vestia Moonspear|r in Feathermoon Stronghold
+    .turnin 2871 >>Turn in Delivering the Relic
+step
+    .itemcount 18969,1
+    >>Use the Pristine Yeti Hide to Accept the quest
+    .use 18969
+    .accept 7735 >>Accept Pristine Yeti Hide
+    .goto Feralas,30.6,42.6
+step
+    .isOnQuest 7735
+    .goto Feralas,30.6,42.6
+    .target Pratt McGrubben
+    >>Talk to |cRXP_FRIENDLY_Pratt McGrubben|r in Feathermoon Stronghold
+    .accept 7735 >>Accept Pristine Yeti Hide
+step
+    .isOnQuest 7733
+    .goto Feralas,30.6,42.6
+    .target Pratt McGrubben
+    >>Talk to |cRXP_FRIENDLY_Pratt McGrubben|r in Feathermoon Stronghold
+    .turnin 7733 >>Turn in Improved Quality
+step
+    .fly Nijel's Point
+    .goto Feralas,30.2,43.2
+    .target Fyldren Moonfeather
+step
+    .isQuestTurnedIn 1466
+    .goto Desolace,66.2,9.6
+    .target Kreldig Ungor
+    >>Talk to |cRXP_FRIENDLY_Kreldig Ungor|r Nijel's Point
+    .accept 1467 >>Accept Reagents for Reclaimers Inc
+step
+    .isQuestTurnedIn 1456
+    .goto Desolace,66.2,9.6
+    .target Kreldig Ungor
+    >>Talk to |cRXP_FRIENDLY_Kreldig Ungor|r Nijel's Point
+    .accept 1457 >>Accept The Karnitol Shipwreck
+step
+    .fly Rut'Theran Village
+    .goto Desolace,64.6,10.6
+    .target Baritanas Skyriver
+step
+    .goto Darnassus,63.8,22.8
+    .target Raedon Duskstriker
+    >>Talk to |cRXP_FRIENDLY_Raedon Duskstriker|r in Darnassus
+    .turnin 7792 >>Turn in A Donation of Wool
+    .turnin 7798 >>Turn in A Donation of Silk
+    .turnin 7799 >>Turn in A Donation of Mageweave
+step
+    .isOnQuest 4267
+    .goto Darnassus,42.0,85.8
+    .target Gracina Spiritmight
+    >>Talk to |cRXP_FRIENDLY_Gracina Spiritmight|r in Darnassus
+    .turnin 4267 >>Turn in Rise of the Silithid
+step
+    .isOnQuest 3378
+    .goto Darnassus,38.6,80.8
+    .target Astarii Starseeke
+    >>Talk to |cRXP_FRIENDLY_Astarii Starseeke|r in Darnassus
+    .turnin 3378 >>Turn in Prayer to Elune
+step
+    .goto Darnassus,39.8,42.6
+    .target Idriana
+    >>Talk to |cRXP_FRIENDLY_Idriana|r in Darnassus
+    .bankwithdraw 3712,10005 >>Withdraw any needed items from your bank
+step
+    .hs >>Hearth to Aerie Peak, Hinterlands
+step
+    .isOnQuest 2877
+    .goto The Hinterlands,14.8,44.6
+    .target Fraggar Thundermantle
+    >>Talk to |cRXP_FRIENDLY_Fraggar Thundermantle|r in Aerie Peak
+    .turnin 2877 >>Turn in Skulk Rock Clean-up
+step
+    .isQuestTurnedIn 2989
+    .goto The Hinterlands,9.8,44.6
+    .target Gryphon Master Talonaxe
+    >>Talk to |cRXP_FRIENDLY_Gryphon Master Talonaxe|r in Aerie Peak
+    .accept 2990 >>Accept Thadius Grimshade
+step
+    .fly Refuge Point
+    .goto The Hinterlands,11.0,46.0
+    .target Guthrum Thunderfist
+step
+    .goto Arathi Highlands,46.0,45.2
+    .target Samuel Hawke
+    >>Talk to |cRXP_FRIENDLY_Samuel Hawke|r at Refuge Point
+    .accept 8261 >>Accept Arathor Standard Care Package
+    .turnin 8261 >>Turn in Arathor Standard Care Package
+step
+    .isQuestTurnedIn 696
+    .goto Arathi Highlands,46.6,47.0
+    .target Skuerto
+    >>Talk to |cRXP_FRIENDLY_Skuerto|r at Refuge Point
+    .accept 697 >>Accept Malin's Request
+step
+    .isQuestTurnedIn 660
+    .goto Arathi Highlands,60.2,53.8
+    .target Quae
+    >>Talk to |cRXP_FRIENDLY_Quae|r at Go'Shek Farm
+    .accept 661 >>Accept Hints of a New Plague?
+step
+    .isOnQuest 656
+    .goto Arathi Highlands,62.5,33.8
+    .target Shards of Myzrael
+    >>Click the |cRXP_FRIENDLY_Shards of Myzrael|r in Arathi Highlands
+    .turnin 656 >>Turn in Summoning the Princess
+step
+    .fly Southshore
+    .goto Arathi Highlands,45.6,46.0
+    .target Cedrik Prose
+step
+    .isOnQuest 1053
+    .goto Hillsbrad Foothills,51.4,58.6
+    .target Raleigh the Devout
+    >>Talk to |cRXP_FRIENDLY_Raleigh the Devout|r in Southshore
+    .turnin 1053 >>Turn in In the Name of the Light
+step
+    .isOnQuest 504
+    .goto Hillsbrad Foothills,49.6,58.6
+    .target Marshal Redpath
+    >>Talk to |cRXP_FRIENDLY_Marshal Redpath|r in Southshore
+    .turnin 504 >>Turn in Crushridge Warmongers
+step
+    .isOnQuest 661
+    .goto Hillsbrad Foothills,50.2,58.8
+    .target Phin Odelic
+    >>Talk to |cRXP_FRIENDLY_Phin Odelic|r in Southshore
+    .turnin 661 >>Turn in Hints of a New Plague?
+step
+    .itemcount 3712,10
+    .goto Hillsbrad Foothills,51.8,58.6
+    .target Chef Jessen
+    >>Talk to |cRXP_FRIENDLY_Chef Jessen|r in Southshore
+    .accept 555 >>Accept Soothing Turtle Bisque
+    .turnin 555 >>Turn in Soothing Turtle Bisque
+step
+    .isQuestTurnedIn 511
+    .goto Hillsbrad Foothills,50.6,57.0
+    .target Loremaster Dibbs
+    >>Talk to |cRXP_FRIENDLY_Loremaster Dibbs|r in Southshore
+    .accept 514 >>Accept Letter to Stormpike
+step
+    .fly Thelsamar
+    .goto Hillsbrad Foothills,49.4,52.6
+    .target Darla Harris
+step
+    .home >>Set your hearthstone at Stoutlager Inn, Loch Modan
+step
+    .itemcount 10005,1
+    >>Use Margol's Horn to Accept the quest
+    .use 10005
+    .accept 3181 >>Accept The Horn of the Beast
+    .goto Loch Modan,18.2,83.8
+step
+    .isOnQuest 3181
+    .goto Loch Modan,18.2,83.8
+    .target Mountaineer Pebblebitty
+    >>Talk to |cRXP_FRIENDLY_Mountaineer Pebblebitty|r in Loch Modan
+    .turnin 3181 >>Turn in The Horn of the Beast
+step
+    .isQuestTurnedIn 3181
+    .goto Loch Modan,18.2,83.8
+    .target Mountaineer Pebblebitty
+    >>Talk to |cRXP_FRIENDLY_Mountaineer Pebblebitty|r in Loch Modan
+    .accept 3182 >>Accept Proof of Deed
+step
+    .fly Ironforge
+    .goto Loch Modan,33.8,50.8
+    .target Thorgrum Borrelson
+step
+    .isOnQuest 1467
+    .goto Ironforge,68.2,17.4
+    .target Roetten Stonehammer
+    >>Talk to |cRXP_FRIENDLY_Roetten Stonehammer|r in The Hall of Explorers
+    .turnin 1467 >>Turn in Reagents for Reclaimers Inc
+step
+    .isOnQuest 1457
+    .goto Ironforge,68.2,17.4
+    .target Roetten Stonehammer
+    >>Talk to |cRXP_FRIENDLY_Roetten Stonehammer|r in The Hall of Explorers
+    .turnin 1457 >>Turn in The Karnitol Shipwreck
+step
+    .isOnQuest 514
+    .goto Ironforge,74.6,12.0
+    .target Prospector Stormpike
+    >>Talk to |cRXP_FRIENDLY_Prospector Stormpike|r in The Hall of Explorers
+    .turnin 514 >>Turn in Letter to Stormpike
+step
+    .goto Ironforge,74.6,12.0
+    .target Prospector Stormpike
+    >>Talk to |cRXP_FRIENDLY_Prospector Stormpike|r in The Hall of Explorers
+    .accept 707 >>Accept Ironband Wants You!
+step
+    .isOnQuest 2240
+    .goto Ironforge,74.6,12.0
+    .target Prospector Stormpike
+    >>Talk to |cRXP_FRIENDLY_Prospector Stormpike|r in The Hall of Explorers
+    .turnin 2240 >>Turn in The Hidden Chamber
+step
+    .isOnQuest 3182
+    .goto Ironforge,71.6,14.4
+    .target Curator Thorius
+    >>Talk to |cRXP_FRIENDLY_Curator Thorius|r in The Hall of Explorers
+    .turnin 3182 >>Turn in Proof of Deed
+step
+    .isQuestTurnedIn 3182
+    .goto Ironforge,71.6,14.4
+    .target Curator Thorius
+    >>Talk to |cRXP_FRIENDLY_Curator Thorius|r in The Hall of Explorers
+    .accept 3201 >>Accept At Last!
+step
+    .isOnQuest 2279
+    .goto Ironforge,69.8,18.4
+    .target High Explorer Magellas
+    >>Talk to |cRXP_FRIENDLY_High Explorer Magellas|r in The Hall of Explorers
+    .turnin 2279 >>Turn in The Platinum Discs
+step
+    .isQuestTurnedIn 2279
+    .goto Ironforge,69.8,18.4
+    .target High Explorer Magellas
+    >>Talk to |cRXP_FRIENDLY_High Explorer Magellas|r in The Hall of Explorers
+    .accept 2439 >>Accept The Platinum Discs
+step
+    .isOnQuest 735
+    .goto Ironforge,50.6,6.2
+    .target Gerrig Bonegrip
+    >>Talk to |cRXP_FRIENDLY_Gerrig Bonegrip|r in the Forlorn Cavern
+    .turnin 735 >>Turn in The Star, The Hand, and the Heart
+step
+    .isQuestTurnedIn 735
+    .goto Ironforge,50.6,6.2
+    .target Gerrig Bonegrip
+    >>Talk to |cRXP_FRIENDLY_Gerrig Bonegrip|r in the Forlorn Cavern
+    .accept 737 >>Accept Forbidden Knowledge
+step
+    .goto Ironforge,43.6,33.2
+    .target Mistina Steelshield
+    >>Talk to |cRXP_FRIENDLY_Mistina Steelshield|r in Ironforge
+    .turnin 7802 >>Turn in A Donation of Wool
+    .turnin 7803 >>Turn in A Donation of Silk
+    .turnin 7804 >>Turn in A Donation of Mageweave
+step
+    .goto Ironforge,60.4,38.0
+    .target Daryl Riknussun
+    >>Talk to |cRXP_FRIENDLY_Daryl Riknussun|r in Ironforge
+    .accept 6612 >>Accept I Know A Guy...
+step
+    .goto Ironforge,54.8,58.6
+    .target Nissa Firestone
+    >>Talk to |cRXP_FRIENDLY_Nissa Firestone|r in Ironforge
+    .accept 6625 >>Accept Alliance Trauma
+step
+    .isOnQuest 2439
+    .goto Ironforge,33.8,60.6
+    .target Dinita Stonemantle
+    >>Talk to |cRXP_FRIENDLY_Dinita Stonemantle|r in The Commons
+    .turnin 2439 >>Turn in The Platinum Discs
+step
+    .zone 226 >>Head to Gnomeregan
+step
+    .itemcount 9308,1
+    .target The Sparklematic 5200
+    >>Click |cRXP_FRIENDLY_The Sparklematic 5200|r inside Gnomeregan
+    .accept 80161 >>Accept The Sparklematic 5200!
+    .turnin 80161 >>Turn in The Sparklematic 5200!
+step
+    .itemcount 216661,1
+    >>Use the Grime-Encrusted Ring to Accept the quest
+    .use 216661
+    .accept 79986 >>Accept Grime-Encrusted Ring
+step
+    .isOnQuest 79986
+    .target The Sparklematic 5200
+    >>Click |cRXP_FRIENDLY_The Sparklematic 5200|r inside Gnomeregan
+    .turnin 79986 >>Turn in Grime-Encrusted Ring
+step
+    .zone Loch Modan >>Drop group inside Gnomeregan to Ghetto Hearth to Loch Modan
+step
+    .isOnQuest 3201
+    .goto Loch Modan,18.2,83.8
+    .target Mountaineer Pebblebitty
+    >>Talk to |cRXP_FRIENDLY_Mountaineer Pebblebitty|r in the Valley of the Kings
+    .turnin 3201 >>Turn in At Last!
+step
+    .isOnQuest 707
+    .goto Loch Modan,65.8,65.6
+    .target Prospector Ironband
+    >> |cRXP_FRIENDLY_Prospector Ironband|r at Ironband's Excavation Site
+    .turnin 707 >>Turn in Ironband Wants You!
+step
+    .isQuestTurnedIn 707
+    .goto Loch Modan,65.8,65.6
+    .target Prospector Ironband
+    >> |cRXP_FRIENDLY_Prospector Ironband|r at Ironband's Excavation Site
+    .accept 738 >>Accept Find Agmond
+step
+    .zone Badlands >>Head to Hammertoe's Digsite, Badlands
+step
+    .isQuestTurnedIn 723
+    .goto Badlands,53.4,43.6
+    .target Prospector Ryedol
+    >>Talk to |cRXP_FRIENDLY_Prospector Ryedol|r in the Badlands
+    .accept 724 >>Accept Prospect of Faith
+step
+    .isOnQuest 717
+    .goto Badlands,61.8,54.8
+    .target Garek
+    >>Talk to |cRXP_FRIENDLY_Garek|r in the Badlands
+    .turnin 717 >>Turn in Tremors of the Earth
+step
+    .isOnQuest 737
+    .goto Badlands,51.4,76.8
+    .target Theldurin the Lost
+    >>Talk to |cRXP_FRIENDLY_Theldurin the Lost|r in the Badlands
+    .turnin 737 >>Turn in Forbidden Knowledge
+step
+    .isOnQuest 738
+    .goto Badlands,50.9,62.5
+    .target Battered Dwarven Skeleton
+    >>Click the |cRXP_FRIENDLY_Battered Dwarven Skeleton|r in the Badlands
+    .turnin 738 >>Turn in Find Agmond
+step
+    .itemcount 4611,9
+    .goto Badlands,42.4,52.8
+    .target Rigglefuzz
+    >>Talk to |cRXP_FRIENDLY_Rigglefuzz|r in the Badlands
+    .accept 705 >>Accept Pearl Diving
+    .turnin 705 >>Turn in Pearl Diving
+step
+    .itemcount 3404,4
+    .goto Badlands,42.4,52.8
+    .target Rigglefuzz
+    >>Talk to |cRXP_FRIENDLY_Rigglefuzz|r in the Badlands
+    .accept 703 >>Accept Barbecued Buzzard Wings
+    .turnin 703 >>Turn in Barbecued Buzzard Wings
+step
+    .isQuestTurnedIn 1108
+    .goto Badlands,42.2,52.6
+    .target Martek the Exiled
+    >>Talk to |cRXP_FRIENDLY_Martek the Exiled|r in the Badlands
+    .accept 1137 >>Accept News for Fizzle
+step
+    .itemcount 3829,1
+    .goto Badlands,26.0,45.8
+    .target Lotwil Veriatus
+    >>Talk to |cRXP_FRIENDLY_Lotwil Veriatus|r in the Badlands
+    .accept 713 >>Accept Coolant Heads Prevail
+    .turnin 713 >>Turn in Coolant Heads Prevail
+step
+    .itemcount 4389,1
+    .goto Badlands,26.0,45.8
+    .target Lotwil Veriatus
+    >>Talk to |cRXP_FRIENDLY_Lotwil Veriatus|r in the Badlands
+    .accept 714 >>Accept Gyro... What?
+    .turnin 714 >>Turn in Gyro... What?
+step
+    .isQuestTurnedIn 712
+    .isQuestTurnedIn 714
+    .itemcount 929,1
+    .itemcount 3823,1
+    .goto Badlands,25.8,44.6
+    .target Lucien Tosselwrench
+    >>Talk to |cRXP_FRIENDLY_Lucien Tosselwrench|r in the Badlands
+    .accept 715 >>Accept Liquid Stone
+    .turnin 715 >>Turn in Liquid Stone
+step
+    .isQuestTurnedIn 712
+    .isQuestTurnedIn 714
+    .itemcount 2868,1
+    .goto Badlands,25.8,44.6
+    .target Lucien Tosselwrench
+    >>Talk to |cRXP_FRIENDLY_Lucien Tosselwrench|r in the Badlands
+    .accept 716 >>Accept Stone Is Better than Cloth
+    .turnin 716 >>Turn in Stone Is Better than Cloth
+step
+    .isQuestTurnedIn 712
+    .isQuestTurnedIn 714
+    .goto Badlands,26.0,45.8
+    .target Lotwil Veriatus
+    >>Talk to |cRXP_FRIENDLY_Lotwil Veriatus|r in the Badlands
+    .accept 734 >>Accept This Is Going to Be Hard
+step
+    .isOnQuest 734
+    .goto Badlands,25.8,44.6
+    .target Lucien Tosselwrench
+    >>Talk to |cRXP_FRIENDLY_Lucien Tosselwrench|r in the Badlands
+    .turnin 734 >>Turn in This Is Going to Be Hard
+step
+    .isQuestTurnedIn 734
+    .goto Badlands,25.8,44.6
+    .target Lucien Tosselwrench
+    >>Talk to |cRXP_FRIENDLY_Lucien Tosselwrench|r in the Badlands
+    .accept 777 >>Accept This Is Going to Be Hard
+step
+    .isOnQuest 777
+    .goto Badlands,26.0,45.8
+    .target Lotwil Veriatus
+    >>Talk to |cRXP_FRIENDLY_Lotwil Veriatus|r in the Badlands
+    .turnin 777 >>Turn in This Is Going to Be Hard
+step
+    #completewith next
+    .zone Ironforge >>Head to Ironforge
+step
+    .isOnQuest 724
+    .goto Ironforge,77.2,11.8
+    .target Historian Karnik
+    >>Talk to |cRXP_FRIENDLY_Historian Karnik|r in The Hall of Explorers
+    .turnin 724 >>Turn in Prospect of Faith
+step
+    >>The remainder of this guide is unfinished
+    +See the maps in Joardee's Patreon sheet
 ]])
