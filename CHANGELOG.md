@@ -1,6 +1,9 @@
 # Changelog
 
 ## Versions
+### 1.6.0
+- Add Level 50 placeholder guides (v1)
+
 ### 1.5.0
 - Alliance P3 Turn-In Route (v2)
 
