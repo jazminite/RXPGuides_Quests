@@ -1,6 +1,18 @@
 # Changelog
 
 ## Versions
+### 1.6.3
+- Alliance Level 50 (P4) Turn in Route (v2)
+- Horde Level 50 (P4) Turn in Route (v2)
+- Alliance Level 50 (P4) Collection Route updates (v3)
+- Horde Level 50 (P4) Collection Route updates (v3)
+
+### 1.6.2
+- Alliance Level 50 (P4) Collection Route (v2)
+
+### 1.6.1
+- Horde Level 50 (P4) Collection Route (v2)
+
 ### 1.6.0
 - Add Level 50 placeholder guides (v1)
 
