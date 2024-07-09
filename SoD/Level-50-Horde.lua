@@ -16,7 +16,7 @@ step
 
 RXPGuides.RegisterGuide([[
 #classic
-#version 2
+#version 3
 << Horde
 #group Custom Quests for RXP
 #subgroup SoD Level 50 Quest Stacking
