@@ -20,7 +20,7 @@ step
 
 RXPGuides.RegisterGuide([[
 #classic
-#version 3
+#version 4
 << Alliance
 #group Custom Quests for RXP
 #subgroup SoD Level 50 Quest Stacking
@@ -229,6 +229,7 @@ step
   .turnin 3441 >>Turn in Divine Retribution
   .accept 3442 >>Accept The Flawless Flame
 step
+  #completewith next
   >>Kill |cRXP_ENEMY_Elementals|r in Searing Gorge for |cRXP_LOOT_Hearts of Flame|r
   .complete 3442,1 >>The Flawless Flame
   .mob Inferno Elemental
@@ -240,6 +241,13 @@ step
   .complete 3442,2 >>The Flawless Flame
   .mob Heavy War Golem
   .mob Tempered War Golem
+  >>|cRXP_WARN_NOTE|r: Mobs are located throughout the zone.
+step
+  >>Kill |cRXP_ENEMY_Elementals|r in Searing Gorge for |cRXP_LOOT_Hearts of Flame|r
+  .complete 3442,1 >>The Flawless Flame
+  .mob Inferno Elemental
+  .mob Magma Elemental
+  .mob Blazing Elemental
   >>|cRXP_WARN_NOTE|r: Mobs are located throughout the zone.
 step
   .goto Searing Gorge,39.0,39.0
@@ -819,6 +827,13 @@ step
   .mob Jadefire Betrayer
   .mob Jadefire Trickster
   .mob Jadefire Hellcaller
+step
+  #completewith next
+  .goto Felwood,38.6,49.6
+  .use 11948
+  >>Kill |cRXP_ENEMY_Tainted Oozes|r in Felwood then fill the |cRXP_PICK_Empty Tainted Ooze Jar|r while targeting the corpse
+  .complete 4512,2 >>A Little Slime Goes a Long Way
+  .mob Tainted Ooze
 step
   .goto Felwood,40.2,68.6
   .use 11914
@@ -1551,7 +1566,7 @@ step
 
 RXPGuides.RegisterGuide([[
 #classic
-#version 2
+#version 3
 << Alliance
 #group Custom Quests for RXP
 #subgroup SoD Level 50 Quest Stacking
@@ -1648,6 +1663,11 @@ step
   .target Arch Druid Fandral Staghelm
   >>Talk to |cRXP_FRIENDLY_Arch Druid Fandral Staghelm|r in Darnassus
   .accept 3764 >>Accept Un'Goro Soil
+step
+  .isOnQuest 3764
+  .goto Darnassus,31.8,7.0
+  .target Jenal
+  >>Talk to |cRXP_FRIENDLY_Jenal|r in Darnassus
   .turnin 3764 >>Turn in Un'Goro Soil
 step
   .isQuestTurnedIn 3764
@@ -1657,9 +1677,9 @@ step
   .accept 3781 >>Accept Morograin Research
 step
   .isOnQuest 3781
-  .goto Darnassus,31.8,7.0
-  .target Jenal
-  >>Talk to |cRXP_FRIENDLY_Jenal|r in Darnassus
+  .goto Darnassus,35.2,8.0
+  .target Mathrengyl Bearwalker
+  >>Talk to |cRXP_FRIENDLY_Mathrengyl Bearwalker|r in Darnassus
   .turnin 3781 >>Turn in Morograin Research
 step
   .isQuestTurnedIn 3781
@@ -1694,6 +1714,12 @@ step
   .target Kayneth Stillwind
   >>Talk to |cRXP_FRIENDLY_Kayneth Stillwind|r in Eastern Ashenvale
   .turnin 4261 >>Turn in Ancient Spirit
+step << Mage
+  .isOnQuest 82114
+  .goto Azshara,29.6,40.6
+  .target Archmage Xylem
+  >>Talk to |cRXP_FRIENDLY_Archmage Xylem|r in Azshara
+  .turnin 82114 >>Turn in Destroy Morphaz
 step
   .hs >>Hearth to Gadgetzen
 step
@@ -2071,6 +2097,12 @@ step
   .target Highlord Bolvar Fordragon
   >>Talk to |cRXP_FRIENDLY_Highlord Bolvar Fordragon|r in Stormwind
   .accept 4185 >>Accept The True Masters
+step
+  .isOnQuest 4185
+  .goto Stormwind City,78.0,17.8
+  .target Lady Katrana Prestor
+  >>Speak with |cRXP_FRIENDLY_Lady Katrana Prestor|r in Stormwind
+  .complete 4185,1 >>The True Masters
 step
   .isOnQuest 4185
   .goto Stormwind City,78.0,18.0

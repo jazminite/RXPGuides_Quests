@@ -1,6 +1,10 @@
 # Changelog
 
 ## Versions
+### 1.6.4
+- Alliance Level 50 (P4) Collection Route updates (v4)
+- Alliance Level 50 (P4) Turn in Route updates (v3)
+
 ### 1.6.3
 - Alliance Level 50 (P4) Turn in Route (v2)
 - Horde Level 50 (P4) Turn in Route (v2)
