@@ -7,7 +7,7 @@
 ## Title: RestedXP Quests
 ## Notes: In-game quest stacking
 ## Author: Jazminite
-## Version: 1.6.3
+## Version: 1.6.4
 
 ## Dependencies: RXPGuides
 
