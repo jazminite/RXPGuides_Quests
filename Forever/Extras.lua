@@ -118,12 +118,10 @@ RXPGuides.RegisterGuide([[
   step
       .home >>Have your Hearthstone set anywhere in The Barrens
       .fly Ratchet
-      .goto The Barrens,44.4,59.0
+      .goto The Barrens,44.5,59.1
       .target Omusa Thunderhorn
   step
-      #completewith next
       .zone Stranglethorn Vale >> Take the boat to Stranglethorn Vale
-  step
       .fly Grom'gol
       .goto Stranglethorn Vale,26.8,77.0
       .target Gringer

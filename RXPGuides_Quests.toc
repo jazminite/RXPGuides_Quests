@@ -7,12 +7,12 @@
 
 ## Dependencies: RXPGuides
 
-Forever/Extras.lua
+Forever/Extras.lua [AllowLoadGameType camelot]
 
-SoD/Extras.lua
-SoD/Level-25-Alliance.lua
-SoD/Level-25-Horde.lua
-SoD/Level-40-Alliance.lua
-SoD/Level-40-Horde.lua
-SoD/Level-50-Alliance.lua
-SoD/Level-50-Horde.lua
+SoD/Extras.lua [AllowLoadGameType vanilla]
+SoD/Level-25-Alliance.lua [AllowLoadGameType vanilla]
+SoD/Level-25-Horde.lua [AllowLoadGameType vanilla]
+SoD/Level-40-Alliance.lua [AllowLoadGameType vanilla]
+SoD/Level-40-Horde.lua [AllowLoadGameType vanilla]
+SoD/Level-50-Alliance.lua [AllowLoadGameType vanilla]
+SoD/Level-50-Horde.lua [AllowLoadGameType vanilla]

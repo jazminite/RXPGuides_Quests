@@ -1,3 +1,6 @@
+local _, addon = ...
+if addon.GetSeason() ~= 2 then return end
+
 RXPGuides.RegisterGuide([[
 #classic
 #version 3
