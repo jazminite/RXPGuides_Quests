@@ -4,6 +4,7 @@
 ### 2.0.0
 - Update guide load conditions
 - Add Sleeping Bag Quest guides for WoW Forever
+- Add Tools for Custom Guide creators (Coordinates / Quest Print)
 
 ### 1.6.4
 - Alliance Level 50 (P4) Collection Route updates (v4)

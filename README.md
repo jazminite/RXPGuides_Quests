@@ -19,9 +19,15 @@ The guides in this addon require [RestedXP's][1] base addon. RestedXP's base add
 - Cozy Sleeping Bag route for Alliance & Horde
 
 ## Tools for Guide Writers
+### Coordinate Helper
 Use the command `/rxpq` or `/rxpcoords` in game chat, which prints your character's current location formatted for building your Custom RXP guide.
 
 Example output: `.goto Stranglethorn Vale,26.85,77.06`
+
+### Quest Capture
+Use the command `/rxpcap on` to enable, `/rxpcap off` to disable, or `rxpcap` to toggle
+
+Starts out disabled by default
 
 ## Installation
 Download the latest release on [Curseforge][2].

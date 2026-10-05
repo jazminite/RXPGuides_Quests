@@ -8,6 +8,7 @@
 ## Dependencies: RXPGuides
 
 Coordinates.lua
+QuestCapture.lua
 
 Forever/Extras.lua [AllowLoadGameType camelot]
 
