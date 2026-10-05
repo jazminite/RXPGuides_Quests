@@ -123,7 +123,7 @@ RXPGuides.RegisterGuide([[
   step
       .zone Stranglethorn Vale >> Take the boat to Stranglethorn Vale
       .fly Grom'gol
-      .goto Stranglethorn Vale,26.8,77.0
+      .goto Stranglethorn Vale,26.85,77.06
       .target Gringer
   step
       #completewith next

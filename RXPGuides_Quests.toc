@@ -7,6 +7,8 @@
 
 ## Dependencies: RXPGuides
 
+Coordinates.lua
+
 Forever/Extras.lua [AllowLoadGameType camelot]
 
 SoD/Extras.lua [AllowLoadGameType vanilla]

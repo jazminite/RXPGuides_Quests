@@ -3,6 +3,9 @@ The guides in this addon require [RestedXP's][1] base addon. RestedXP's base add
 
 ## Custom Quest Guides
 
+### WoW Forever
+- Cozy Sleeping Bag route for Alliance & Horde
+
 ### Season of Discovery Quest Stacking
 
 - Level 25 Collection and Turn-in Guides for Alliance
@@ -14,6 +17,11 @@ The guides in this addon require [RestedXP's][1] base addon. RestedXP's base add
 
 ### Season of Discovery Extras
 - Cozy Sleeping Bag route for Alliance & Horde
+
+## Tools for Guide Writers
+Use the command `/rxpq` or `/rxpcoords` in game chat, which prints your character's current location formatted for building your Custom RXP guide.
+
+Example output: `.goto Stranglethorn Vale,26.85,77.06`
 
 ## Installation
 Download the latest release on [Curseforge][2].
