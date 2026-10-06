@@ -40,11 +40,93 @@ local function GetTargetName()
   end
 end
 
+local function GetEUIChat()
+  local eui = _G.EllesmereUI
+  local moduleNS = eui and eui._ModuleNS and eui._ModuleNS.EllesmereUIChat
+  return moduleNS and moduleNS.ECHAT
+end
+
+local function GetChatTimestampStatus()
+  local echat = GetEUIChat()
+  if not (echat and echat.EngineSetStampAll) then
+    return "EllesmereUI Chat filter unavailable"
+  end
+
+  if echat.DB then
+    local ok, settings = pcall(echat.DB)
+    if ok and type(settings) == "table" then
+      return "EllesmereUI Chat filter ready; timestamps "
+        .. (settings.timestampAll == true and "on" or "off")
+    end
+  end
+
+  return "EllesmereUI Chat filter found; settings unavailable"
+end
+
+local function PrintGuideLine(message)
+  local echat = GetEUIChat()
+  local stampFormat
+  local stampWasEnabled = false
+
+  if echat and echat.DB and echat.EngineSetStampAll then
+    local ok, settings = pcall(echat.DB)
+    if ok and type(settings) == "table" then
+      stampWasEnabled = settings.timestampAll == true
+      stampFormat = settings.timestampFormat or "%I:%M "
+      if stampFormat == "none" then
+        stampFormat = nil
+      elseif stampFormat == "__blizzard" then
+        local getTimestampFormat = ChatFrameUtil and ChatFrameUtil.GetTimestampFormat
+        local gotFormat, blizzardFormat
+        if getTimestampFormat then
+          gotFormat, blizzardFormat = pcall(getTimestampFormat)
+        end
+        stampFormat = gotFormat and type(blizzardFormat) == "string"
+          and blizzardFormat ~= "" and blizzardFormat ~= "none" and blizzardFormat or nil
+      end
+      if type(stampFormat) ~= "string" or stampFormat == "" then
+        stampFormat = nil
+      end
+    else
+      echat = nil
+    end
+  else
+    echat = nil
+  end
+
+  local canRestoreStampSetting = echat and echat.EngineSetStampAll
+    and (echat.ApplyStampAll or (stampWasEnabled and stampFormat))
+  if canRestoreStampSetting then
+    pcall(echat.EngineSetStampAll, false)
+  end
+
+  local ok, err
+  if DEFAULT_CHAT_FRAME and DEFAULT_CHAT_FRAME.AddMessage then
+    ok, err = pcall(DEFAULT_CHAT_FRAME.AddMessage, DEFAULT_CHAT_FRAME, message)
+  else
+    ok, err = pcall(print, message)
+  end
+
+  if canRestoreStampSetting then
+    if echat.ApplyStampAll then
+      pcall(echat.ApplyStampAll)
+    elseif stampWasEnabled and stampFormat then
+      pcall(echat.EngineSetStampAll, true, stampFormat)
+    end
+  end
+
+  if not ok then
+    error(err)
+  end
+end
+
 RXPQuestsSettings = RXPQuestsSettings or {}
-local captureEnabled = RXPQuestsSettings.questCaptureEnabled
-if captureEnabled == nil then
-  captureEnabled = false
+if RXPQuestsSettings.questCaptureEnabled == nil then
   RXPQuestsSettings.questCaptureEnabled = false
+end
+
+local function IsCaptureEnabled()
+  return RXPQuestsSettings.questCaptureEnabled == true
 end
 
 local function PrintAcceptedQuest(firstArg, secondArg, thirdArg)
@@ -74,46 +156,55 @@ local function PrintAcceptedQuest(firstArg, secondArg, thirdArg)
     areaName = GetMinimapZoneText()
   end
 
-  print("step")
+  PrintGuideLine("step")
   if position and mapName then
-    print(string.format("    .goto %s,%.2f,%.2f", mapName, position.x * 100, position.y * 100))
+    PrintGuideLine(string.format("    .goto %s,%.2f,%.2f", mapName, position.x * 100, position.y * 100))
   end
 
   if targetName then
-    print("    .target " .. targetName)
+    PrintGuideLine("    .target " .. targetName)
     local location = areaName and areaName ~= "" and areaName or mapName
     if location then
       -- Double pipes make the RXP color token print as literal, copyable text.
-      print(string.format("    >>Talk to ||cRXP_FRIENDLY_%s||r in %s", targetName, location))
+      PrintGuideLine(string.format("    >>Talk to ||cRXP_FRIENDLY_%s||r in %s", targetName, location))
     end
   end
 
-  print(string.format("    .accept %d >>%s", questID, title))
+  PrintGuideLine(string.format("    .accept %d >>%s", questID, title))
 end
 
 local frame = CreateFrame("Frame")
 frame:RegisterEvent("QUEST_ACCEPTED")
 frame:SetScript("OnEvent", function(_, _, firstArg, secondArg, thirdArg)
-  if captureEnabled then
-    PrintAcceptedQuest(firstArg, secondArg, thirdArg)
+  if IsCaptureEnabled() then
+    local ok, err = pcall(PrintAcceptedQuest, firstArg, secondArg, thirdArg)
+    if not ok then
+      print("RXP Quests: quest capture error: " .. tostring(err))
+    end
   end
 end)
 
 local function SetCaptureCommand(message)
   message = (message or ""):lower()
+  local enabled = IsCaptureEnabled()
+
   if message == "on" then
-    captureEnabled = true
+    enabled = true
   elseif message == "off" then
-    captureEnabled = false
+    enabled = false
+  elseif message == "status" then
+    print("RXP Quests: quest capture " .. (enabled and "enabled." or "disabled.")
+      .. " " .. GetChatTimestampStatus() .. ".")
+    return
   elseif message == "" then
-    captureEnabled = not captureEnabled
+    enabled = not enabled
   else
-    print("Usage: /rxpqcap [on|off]")
+    print("Usage: /rxpqcap [on|off|status]")
     return
   end
 
-  RXPQuestsSettings.questCaptureEnabled = captureEnabled
-  print("RXP Quests: quest capture " .. (captureEnabled and "enabled." or "disabled."))
+  RXPQuestsSettings.questCaptureEnabled = enabled
+  print("RXP Quests: quest capture " .. (enabled and "enabled." or "disabled."))
 end
 
 SLASH_RXPGUIDESQUESTSCAPTURE1 = "/rxpqcap"
