@@ -6,6 +6,7 @@
 ## Version: 2.0.0
 
 ## Dependencies: RXPGuides
+## SavedVariablesPerCharacter: RXPQuestsSettings
 
 Coordinates.lua
 QuestCapture.lua

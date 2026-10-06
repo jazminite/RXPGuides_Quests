@@ -141,13 +141,13 @@ RXPGuides.RegisterGuide([[
       .hs >>Hearth to The Barrens << !Mage
       .fly Sun Rock Retreat
   step
-      .goto Stonetalon Mountains,50.09,60.81,10,0
-      .goto Stonetalon Mountains,50.9,52.3,10,0
-      >>Follow the path NE of Sun Rock Retreat
-      .goto Stonetalon Mountains,40.76,52.57
-      >>Click the |cRXP_FRIENDLY_Pocket Litter|r at the abandoned camp
-      .turnin 79192 >>Turn in Stepping Stones
-      .accept 79980 >>Accept Scramble
+    .goto Stonetalon Mountains,48.44,58.42,10,0
+    .goto Stonetalon Mountains,50.27,56.87,10,0
+    >>Follow the path NE of Sun Rock Retreat
+    .goto Stonetalon Mountains,40.76,52.57
+    >>Click the |cRXP_FRIENDLY_Pocket Litter|r at the abandoned camp
+    .turnin 79192 >>Turn in Stepping Stones
+    .accept 79980 >>Accept Scramble
   step
       .goto Stonetalon Mountains,39.6,49.8
       >>Click on the |cRXP_FRIENDLY_Mound of Dirt|r

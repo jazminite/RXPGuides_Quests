@@ -25,7 +25,7 @@ Use the command `/rxpq` or `/rxpcoords` in game chat, which prints your characte
 Example output: `.goto Stranglethorn Vale,26.85,77.06`
 
 ### Quest Capture
-Use the command `/rxpcap on` to enable, `/rxpcap off` to disable, or `rxpcap` to toggle
+Use the command `/rxpqcap on` to enable, `/rxpqcap off` to disable, or `/rxpqcap` to toggle
 
 Starts out disabled by default
 

@@ -40,7 +40,12 @@ local function GetTargetName()
   end
 end
 
-local captureEnabled = false
+RXPQuestsSettings = RXPQuestsSettings or {}
+local captureEnabled = RXPQuestsSettings.questCaptureEnabled
+if captureEnabled == nil then
+  captureEnabled = false
+  RXPQuestsSettings.questCaptureEnabled = false
+end
 
 local function PrintAcceptedQuest(firstArg, secondArg, thirdArg)
   -- Classic clients provide the quest ID as the second event argument;
@@ -107,6 +112,7 @@ local function SetCaptureCommand(message)
     return
   end
 
+  RXPQuestsSettings.questCaptureEnabled = captureEnabled
   print("RXP Quests: quest capture " .. (captureEnabled and "enabled." or "disabled."))
 end
 
