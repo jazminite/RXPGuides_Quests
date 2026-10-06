@@ -129,22 +129,7 @@ local function IsCaptureEnabled()
   return RXPQuestsSettings.questCaptureEnabled == true
 end
 
-local function PrintAcceptedQuest(firstArg, secondArg, thirdArg)
-  -- Classic clients provide the quest ID as the second event argument;
-  -- clients with a single argument provide it as the first.
-  local questID = type(secondArg) == "number" and secondArg or firstArg
-  if type(questID) ~= "number" then
-    return
-  end
-
-  local title = GetQuestTitle(questID)
-  if not title and type(thirdArg) == "string" and thirdArg ~= "" then
-    title = thirdArg
-  end
-  if not title then
-    title = "Quest title unavailable"
-  end
-
+local function PrintQuestStep(questID, action, title)
   local mapID = C_Map and C_Map.GetBestMapForUnit and C_Map.GetBestMapForUnit("player")
   local mapInfo = mapID and C_Map.GetMapInfo and C_Map.GetMapInfo(mapID)
   local mapName = mapInfo and mapInfo.name
@@ -170,17 +155,47 @@ local function PrintAcceptedQuest(firstArg, secondArg, thirdArg)
     end
   end
 
-  PrintGuideLine(string.format("    .accept %d >>%s", questID, title))
+  local actionLabel = action == "turnin" and " Turn in " or "Accept "
+  PrintGuideLine(string.format("    .%s %d >>%s%s", action, questID, actionLabel, title))
+end
+
+local function PrintAcceptedQuest(firstArg, secondArg, thirdArg)
+  -- Classic clients provide the quest ID as the second event argument;
+  -- clients with a single argument provide it as the first.
+  local questID = type(secondArg) == "number" and secondArg or firstArg
+  if type(questID) ~= "number" then
+    return
+  end
+
+  local title = GetQuestTitle(questID)
+  if not title and type(thirdArg) == "string" and thirdArg ~= "" then
+    title = thirdArg
+  end
+  PrintQuestStep(questID, "accept", title or "Quest title unavailable")
+end
+
+local function PrintTurnedInQuest(firstArg)
+  local questID = firstArg
+  if type(questID) ~= "number" then
+    return
+  end
+
+  local title = GetQuestTitle(questID)
+  PrintQuestStep(questID, "turnin", title or "Quest title unavailable")
 end
 
 local frame = CreateFrame("Frame")
 frame:RegisterEvent("QUEST_ACCEPTED")
-frame:SetScript("OnEvent", function(_, _, firstArg, secondArg, thirdArg)
-  if IsCaptureEnabled() then
-    local ok, err = pcall(PrintAcceptedQuest, firstArg, secondArg, thirdArg)
-    if not ok then
-      print("RXP Quests: quest capture error: " .. tostring(err))
-    end
+frame:RegisterEvent("QUEST_TURNED_IN")
+frame:SetScript("OnEvent", function(_, event, firstArg, secondArg, thirdArg)
+  if not IsCaptureEnabled() then
+    return
+  end
+
+  local capture = event == "QUEST_TURNED_IN" and PrintTurnedInQuest or PrintAcceptedQuest
+  local ok, err = pcall(capture, firstArg, secondArg, thirdArg)
+  if not ok then
+    print("RXP Quests: quest capture error: " .. tostring(err))
   end
 end)
 
