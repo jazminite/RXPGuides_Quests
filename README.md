@@ -65,5 +65,5 @@ If you would like to support me:
 [1]: https://www.restedxp.com/ref/jazminite
 [2]: https://www.curseforge.com/wow/addons/rxp-quest-guides
 [4]: https://github.com/jazminite/RXPGuides_Quests/issues/new/choose
-[5]: https://www.restedxp.com/custom-guides
+[5]: https://community.restedxp.com/custom-guides
 [6]: https://www.patreon.com/jazminite
