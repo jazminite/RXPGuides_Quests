@@ -1,20 +1,22 @@
-## Interface: 11500
-## Interface-Mainline: 90205
-## Interface-Wrath: 30403
-## Interface-Classic: 11500
-## Interface-BCC: 20504
+## Interface: 99999, 11599, 16001
 
 ## Title: RestedXP Quests
-## Notes: In-game quest stacking
+## Notes: In-game custom quest guides
 ## Author: Jazminite
-## Version: 1.6.4
+## Version: 2.0.0
 
 ## Dependencies: RXPGuides
+## SavedVariablesPerCharacter: RXPQuestsSettings
 
-SoD/Extras.lua
-SoD/Level-25-Alliance.lua
-SoD/Level-25-Horde.lua
-SoD/Level-40-Alliance.lua
-SoD/Level-40-Horde.lua
-SoD/Level-50-Alliance.lua
-SoD/Level-50-Horde.lua
+Coordinates.lua
+QuestCapture.lua
+
+Forever/Extras.lua [AllowLoadGameType camelot]
+
+SoD/Extras.lua [AllowLoadGameType vanilla]
+SoD/Level-25-Alliance.lua [AllowLoadGameType vanilla]
+SoD/Level-25-Horde.lua [AllowLoadGameType vanilla]
+SoD/Level-40-Alliance.lua [AllowLoadGameType vanilla]
+SoD/Level-40-Horde.lua [AllowLoadGameType vanilla]
+SoD/Level-50-Alliance.lua [AllowLoadGameType vanilla]
+SoD/Level-50-Horde.lua [AllowLoadGameType vanilla]
