@@ -1,6 +1,9 @@
 # Changelog
 
 ## Versions
+### 2.1.0
+- Add Alliance 1-5 Exploration Route (Human starting zone)
+
 ### 2.0.0
 - Update guide load conditions
 - Add Sleeping Bag Quest guides for WoW Forever
