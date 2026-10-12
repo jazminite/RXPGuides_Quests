@@ -43,30 +43,28 @@ RXPGuides.RegisterGuide([[
   step << !Human
     .goto Elwynn Forest,39.5,64.4
     >>Travel to Elwynn Forest
-  step
+  step << Human
     .goto Elwynn Forest,43.771,65.803
     .target Innkeeper Farley
     >>Talk to |cRXP_FRIENDLY_Innkeeper Farley|r
     .turnin 2158 >>Turn in Rest and Relaxation
-    .home >> Set your Hearthstone to Goldshire
-  step << Human
-    .goto Elwynn Forest,43.8,65.8
-    .turnin 2158
-    >>Turn in Rest and Relaxation at the Goldshire inn.
   step
-    .goto Elwynn Forest,47.04,64.54,5 >>Discover Crystal Lake, then head south to Jerod's Landing.
+    >>Exit the Goldshire Inn
+    .goto Elwynn Forest,47.04,64.54,5 >>Discover Crystal Lake
   step
-    .goto Elwynn Forest,51.56,81.97,5 >>Discover Jerod's Landing, return to the road, then go northeast to the Tower of Azora.
+    >>Travel South
+    .goto Elwynn Forest,51.56,81.97,5 >>Discover Jerod's Landing
   step
-    >>Return to the Road
+    >>Return to the Road and head Northeast
     .goto Elwynn Forest,63.71,71.68,5 >>Discover the Tower of Azora. Continue southeast to Brackwell Pumpkin Patch.
   step
-    .goto Elwynn Forest,65.78,75.33,5 >>Discover Brackwell Pumpkin Patch, then travel east to Eastvale Logging Camp.
+    >>Head Southeast
+    .goto Elwynn Forest,65.78,75.33,5 >>Discover Brackwell Pumpkin Patch
   step
     >>Follow the Road
-    .goto Elwynn Forest,77.12,71.29,5 >>Discover Eastvale Logging Camp, then head south to Ridgepoint Tower.
+    .goto Elwynn Forest,77.12,71.29,5 >>Discover Eastvale Logging Camp
   step
-    >>Follow the Road
+    >>Follow the Road South
     .goto Elwynn Forest,83.61,77.20,5 >>Discover Ridgepoint Tower
   step
     >>Follow the Road into Redridge Mountains
@@ -75,7 +73,7 @@ RXPGuides.RegisterGuide([[
     .deathskip >>Die here and take the spirit resurrection
   step
     >>Swim across the lake to Lakeshire
-    .goto Redridge Mountains,14.76,47.23,5 >>Discover Lakeshire, then explore Redridge Canyons
+    .goto Redridge Mountains,14.76,47.23,5 >>Discover Lakeshire
   step
     .goto Redridge Mountains,12.44,45.83,10,0
     .goto Redridge Mountains,16.21,39.71,5 >>Go up the hill and Discover Redridge Canyons
@@ -89,7 +87,7 @@ RXPGuides.RegisterGuide([[
     >>Follow the Road South
     .goto Redridge Mountains,19.48,76.26,5 >>Discover Lakeridge Highway
   step
-    >>Turn around and follow the mountain/river edge toward Duskwood. If you get trapped, corpse-run rather than fighting through them.
+    >>Turn around and follow the mountain/river edge toward Duskwood. Run back to your corpse if you die.
     .goto Duskwood,91.9,12.1,5 >>Follow the shoreline and discover The Darkened Bank
   step #softcore
     .deathskip >>Die at the bank and take spirit resurrection in Darkshire
@@ -154,65 +152,63 @@ RXPGuides.RegisterGuide([[
     .goto Westfall,41.7,32.8,5 >>Discover The Molsen Farm
   step
     >>Continue North
-    .goto Westfall,49.2,15.9,5 >>Discover Furlbrow's Pumpkin Farm
+    .goto Westfall,47.28,27.87,5 >>Discover Furlbrow's Pumpkin Farm
   step
     >>Continue North
-    .goto Westfall,40.8,17.1,5 >>Discover Jangolode Mine
+    .goto Westfall,47.1,26.8,5 >>Discover Jangolode Mine
   step #softcore
     .deathskip >>Death-skip to Sentinel Hill
   step
-    .goto Westfall,56.6,49.4
+    .goto Westfall,56.53,52.63
+    .target Thor
     .fp Sentinel Hill >>Get the Sentinel Hill flight path
   step
-    .goto Westfall,57.2,29.9,5 >>Head north into Elwynn Forest and discover Saldean's Farm
+    >>Head North along the Road
+    .goto Westfall,57.31,30.35,5 >>Discover Saldean's Farm
   step
-    .goto Elwynn Forest,25.0,76.6,5 >>Discover Westbrook Garrison, then continue east and cross the river. Avoid pulling extra mobs.
+    >>Contine North along the Road
+    .goto Westfall,58.20,21.88,5 >>Discover The Jansen Stead
+  step
+    >>Return to Elwynn Forest
+    .goto Elwynn Forest,21.15,79.44,5 >>Discover Forest's Edge
+  step
+    .goto Elwynn Forest,25.0,76.6,5 >>Discover Westbrook Garrison on the left
+  step
+    >>Continue east and cross the river
+    .goto Elwynn Forest,29.4,80.7,5 >>Discover The Stonefield Farm then die
   step #softcore
-    .goto Elwynn Forest,27.5,80.0
-    .deathskip >>Use the river crossing for the planned death-skip
-  step
-    .goto Elwynn Forest,29.9,86.0,5 >>Discover Stonefield Farm and run north to Goldshire.
+    .deathskip >>Die after discovering Stonefield Farm and spirt res near Goldshire
   step
     .goto Elwynn Forest,42.1,65.9
     .target Marshal Dughan
-    >>Talk to |cRXP_FRIENDLY_Marshal Dughan|r
+    >>Talk to |cRXP_FRIENDLY_Marshal Dughan|r in Goldshire
     .accept 62 >>Accept The Fargodeep Mine
   step
-    .goto Elwynn Forest,43.1,89.6,5 >>Pass Maclure's Vineyard and enter Fargodeep Mine.
+    >>Head South
+    .goto Elwynn Forest,41.40,82.50,5 >>Discover The Maclure Vineyard
   step
     .goto Elwynn Forest,37.4,81.4
     .complete 62,1
-    >>Find the quest objective inside Fargodeep Mine. Do not fight unnecessary mobs.
+    >>Find the quest objective inside Fargodeep Mine then die
   step #softcore
-    .deathskip >>Death-skip back toward Goldshire
+    .deathskip >>Death-skip back to Goldshire
   step
     .goto Elwynn Forest,42.1,65.9
     .target Marshal Dughan
-    >>Talk to |cRXP_FRIENDLY_Marshal Dughan|r
+    >>Talk to |cRXP_FRIENDLY_Marshal Dughan|r in Goldshire
     .turnin 62 >>Turn in The Fargodeep Mine
-    .accept 76 >> Accept The Jasperlode Mine
-  step << Human
-    .goto Elwynn Forest,42.1,65.9
-    .target Marshal Dughan
-    >>Talk to |cRXP_FRIENDLY_Marshal Dughan|r
-    .accept 96627 >>Accept The Adventurer from Marshal Dughan if it is available.
-  step << Human
+    .accept 76 >>Accept The Jasperlode Mine
+  step
     .goto Elwynn Forest,44.8,63.2
     .target Sam Sarsaparilla
-    >>Talk to |cRXP_FRIENDLY_Sam Sarsaparilla|r to complete The Adventurer and unlock the campfire quest
-    .complete 96627,1
-  step << Human
-    .goto Elwynn Forest,44.8,63.2
-    .target Sam Sarsaparilla
-    >>Talk to |cRXP_FRIENDLY_Sam Sarsaparilla|r
-    .turnin 96627 >>Turn in The Adventurer
+    >>Talk to |cRXP_FRIENDLY_Sam Sarsaparilla|r near Goldshire
     .accept 95998 >>Accept The Great Outdoors
-  step << Human
+  step
     .goto Elwynn Forest,44.8,63.2
     .complete 95998,1
     .complete 95998,2
     >>Sit beside Sam's Basic Campfire and wait for the Boosted Rest buff.
-  step << Human
+  step
     .goto Elwynn Forest,44.8,63.2
     .target Sam Sarsaparilla
     >>Talk to |cRXP_FRIENDLY_Sam Sarsaparilla|r
@@ -221,32 +217,23 @@ RXPGuides.RegisterGuide([[
     .goto Elwynn Forest,46.2,62.2
     .target Helene Peltskinner
     >>Talk to |cRXP_FRIENDLY_Helene Peltskinner|r
-    .train 8613 >>[OPTIONAL]: Train |T134366:0|t[Skinning] from Helene Peltskinner and buy a Skinning Knife.
-    .accept 91751 >>Accept Rough Wolf Pelts if you trained skinning
+    .train 8613 >>[OPTIONAL]: Train |T134366:0|t[Skinning] from Helene Peltskinner
   step
-    .isOnQuest 91751
-    .complete 91751,1
-    >>Skin wolves until you have the seven pelts, then return to Helene.
-  step
-    .isOnQuest 91751
-    .goto Elwynn Forest,46.2,62.2
-    .target Helene Peltskinner
-    >>Talk to |cRXP_FRIENDLY_Helene Peltskinner|r
-    .turnin 91751 >>Turn in Rough Wolf Pelts
-  step
+    >>Follow the River North, go up the Mountain path, and walk along the hill top
+    >>Drop down and enter the Jasperlode Mine
     .goto Elwynn Forest,61.8,54.0,70,0
     .goto Elwynn Forest,60.4,50.2
     .complete 76,1
-    >>Follow the hill safely and enter Jasperlode Mine. Find the objective inside; corpse-run if the launch pulls too many mobs.
   step #softcore
-    .deathskip >>Make the last death-skip back to Goldshire.
+    .deathskip >>Make the last death-skip back to Goldshire
     .target Spirit Healer
   step
     .goto Elwynn Forest,42.1,65.9
     .target Marshal Dughan
     >>Talk to |cRXP_FRIENDLY_Marshal Dughan|r
     .turnin 76 >>Turn in The Jasperlode Mine
-    >>This should finish the route at about level 5.
+    >>This should finish the route at about level 5
   step
-    >>Optional class cleanup: train available skills. Continue leveling however you prefer.
+    >>Optional cleanup: train available Class skills
+    >>Continue leveling however you prefer!
 ]])
