@@ -4,6 +4,7 @@ The guides in this addon require [RestedXP's][1] base addon. RestedXP's base add
 ## Custom Quest Guides
 
 ### WoW Forever
+- Alliance 1-5 Exploration Route (Human starting zone)
 - Cozy Sleeping Bag route for Alliance & Horde
 
 ### Season of Discovery Quest Stacking
