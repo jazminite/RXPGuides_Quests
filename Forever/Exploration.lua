@@ -237,3 +237,260 @@ RXPGuides.RegisterGuide([[
     >>Optional cleanup: train available Class skills
     >>Continue leveling however you prefer!
 ]])
+
+RXPGuides.RegisterGuide([[
+  #forever
+  << Horde
+  #name 1-4 Horde Exploration Route
+  #version 1
+  #group Forever Quests for RXP
+
+  step << Tauren
+    #sticky
+    +This is 1-4 Horde Exploration Route beginning with the Tauren starting zone
+    >>Shoutout to Rothie Forever for inspiring this guide
+    .link https://www.youtube.com/watch?v=9SgC1a4E1Vs >> CLICK HERE for Video reference guide
+  step << !Tauren
+    #sticky
+    +This is 1-4 Horde Exploration Route beginning in Mulgore
+    >>Shoutout to Rothie Forever for inspiring this guide
+    .link https://www.youtube.com/watch?v=9SgC1a4E1Vs >> CLICK HERE for Video reference guide
+  step << Tauren
+    #sticky
+    >>Keep moving the whole route so you don't lose your |cRXP_WARN_Plainsrunning|r stacks
+  step << Tauren
+    .goto Mulgore,44.18,76.07
+    .target Chief Hawkwind
+    >>Unequip your starting clothes, then talk to |cRXP_FRIENDLY_Chief Hawkwind|r inside the tent
+    .accept 752 >>Accept A Humble Task
+  step << Tauren
+    .goto Mulgore,45.30,76.52
+    .target Kawnie Softbreeze
+    >>Talk to |cRXP_FRIENDLY_Kawnie Softbreeze|r
+    .vendor >>Sell your starting clothes
+  step << Tauren
+    .goto Mulgore,50.03,81.16
+    .target Greatmother Hawkwind
+    >>Talk to |cRXP_FRIENDLY_Greatmother Hawkwind|r by the well
+    .turnin 752 >>Turn in A Humble Task
+    >>Choose whichever gathering profession book you like. |cRXP_WARN_Skinning is recommended for early gold|r
+  step << Tauren
+    #completewith next
+    .itemcount 247846,1 -- Pelt Collecting for Beginners
+    .train 8613 >>Use |T4624731:0|t[Pelt Collecting for Beginners] to learn Skinning
+    .use 247846
+  step << Tauren
+    #completewith next
+    .itemcount 247840,1 -- Mining for Dummies
+    .train 2575 >>Use |T4625105:0|t[Mining for Dummies] to learn Mining
+    .use 247840
+  step << Tauren
+    #completewith next
+    .itemcount 247841,1 -- Wild Harvest
+    .train 2366 >>Use |T4624731:0|t[Wild Harvest] to learn Herbalism
+    .use 247841
+  step << Tauren
+    .goto Mulgore,38.51,81.54
+    .target Antur Fallow
+    >>Talk to |cRXP_FRIENDLY_Antur Fallow|r on your way out of the starting area
+    .accept 1656 >>Accept A Task Unfinished
+  step #softcore << Tauren
+    .deathskip >>Run or death-skip to Bloodhoof Village. Death-skipping is a few seconds faster
+  step << Tauren
+    .goto Mulgore,46.0,60.8,5 >>Discover Bloodhoof Village
+  step << !Tauren
+    .goto Mulgore,46.0,60.8,5 >>Travel to Mulgore and discover Bloodhoof Village
+  step
+    .goto Mulgore,46.63,61.09
+    .target Innkeeper Kauth
+    >>Talk to |cRXP_FRIENDLY_Innkeeper Kauth|r in the tavern
+    .turnin 1656 >>Turn in A Task Unfinished << Tauren
+    .home >>Set your Hearthstone to Bloodhoof Village
+  step
+    >>Follow the road east
+    .goto Mulgore,60.2,65.8,5 >>Discover The Rolling Plains
+  step
+    .goto Mulgore,63.3,64.7,5 >>Discover Galak Camp before you get into the Barrens
+  step
+    >>Follow the road into The Barrens
+    .goto The Barrens,43.8,58.2,5 >>Discover Camp Taurajo
+  step
+    .goto The Barrens,44.0,57.5,5 >>Discover Agama'gor
+  step
+    .goto The Barrens,44.45,59.16
+    .target Omusa Thunderhorn
+    .fp Camp Taurajo >>Get the Camp Taurajo flight path
+  step
+    >>Move south along the road. |cRXP_WARN_Be wary of the enemies, don't walk close to the Thunder Lizards|r
+    .goto The Barrens,46.2,69.7,5 >>Discover Field of Giants
+  step
+    .goto The Barrens,45.1,85.9,5 >>Discover Bael Modan
+  step
+    .goto The Barrens,44.7,87.3,5 >>Discover Razorfen Downs
+  step
+    .goto The Barrens,44.2,89.2,5 >>Discover Blackthorn Ridge
+  step
+    .goto The Barrens,44.0,90.0,5 >>Discover Razorfen Kraul
+  step
+    .goto Thousand Needles,32.1,21.6,5 >>Discover The Great Lift
+  step #softcore
+    .deathskip >>Death-skip back north to Camp Taurajo
+  step
+    >>Head north along the road
+    .goto The Barrens,49.5,51.8,5 >>Don't miss Bramblescar
+  step #softcore
+    .deathskip >>Death-skip after you cross the bridge to the north
+  step
+    .goto The Barrens,51.9,30.5,5 >>Discover The Crossroads
+  step
+    .goto The Barrens,51.50,30.34
+    .target Devrak
+    .fp The Crossroads >>Get The Crossroads flight path
+  step
+    >>Head northeast
+    .goto The Barrens,53.1,26.5,5 >>Discover Thorn Hill
+  step
+    .goto The Barrens,53.6,21.8,5 >>Discover Grol'dom Farm
+  step
+    >>Turn west and go up the hill
+    .goto The Barrens,49.0,20.3,5 >>Discover Dreadmist Peak
+  step
+    .goto The Barrens,46.0,22.4,5 >>Discover The Forgotten Pools
+  step #softcore
+    .deathskip >>Death-skip back to The Crossroads
+  step
+    >>Head east toward the coast
+    .goto The Barrens,59.8,38.8,5 >>Discover Ratchet
+    >>LEVEL 3
+  step
+    .goto The Barrens,62.7,40.0,5 >>Discover The Merchant Coast
+  step
+    .goto The Barrens,63.09,37.16
+    .target Bragok
+    .fp Ratchet >>Get the Ratchet flight path
+  step #softcore
+    .deathskip >>Cross the river into Durotar, then death-skip to Sen'jin Village
+  step
+    .goto Durotar,57.9,74.8,5 >>Discover Sen'jin Village
+  step
+    .goto Durotar,58.6,77.5,5 >>Discover Echo Isles
+  step
+    >>Head back to the road
+    .goto Durotar,52.06,68.30
+    .target Ukor
+    >>Talk to |cRXP_FRIENDLY_Ukor|r
+    .accept 2161 >>Accept A Peon's Burden
+  step
+    >>Follow the road north, then cut east
+    .goto Durotar,55.0,57.0,5 >>Discover Tiragarde Keep
+  step
+    .goto Durotar,52.1,42.8,5 >>Discover Razor Hill
+  step
+    .goto Durotar,51.51,41.64
+    .target Innkeeper Grosk
+    >>Talk to |cRXP_FRIENDLY_Innkeeper Grosk|r in the inn
+    .turnin 2161 >>Turn in A Peon's Burden
+  step
+    .goto Durotar,51.51,41.64
+    .target Innkeeper Grosk
+    .home >>[OPTIONAL]: Set your Hearthstone to Razor Hill
+  step
+    >>Head northwest
+    .goto Durotar,45.8,37.8,5 >>Discover Razormane Grounds
+  step
+    .goto Durotar,40.9,30.0,5 >>Discover Thunder Ridge
+  step #softcore
+    .deathskip >>Death-skip after discovering Thunder Ridge to the graveyard outside Orgrimmar
+  step
+    .goto Orgrimmar,45.12,63.89
+    .target Doras
+    .fp Orgrimmar >>Get the Orgrimmar flight path
+  step
+    .zone The Barrens >>Head out the back entrance of Orgrimmar into The Barrens
+  step
+    >>|cRXP_WARN_Watch out for enemy patrols|r
+    .goto The Barrens,62.3,4.7,5 >>Discover Boulder Lode Mine
+  step #softcore
+    .deathskip >>Death-skip after discovering Boulder Lode Mine back to The Crossroads
+  step
+    >>Follow the road west toward Stonetalon Mountains
+    .goto The Barrens,40.0,29.9,5 >>Discover Honor's Stand
+  step
+    >>Go west into Stonetalon Mountains
+    .goto Stonetalon Mountains,73.6,97.2,5 >>Discover Malaka'jin
+  step
+    >>Go up the small path, drop down, and immediately go up again
+    .goto Mulgore,38.4,14.8,5 >>Discover Skywatcher Plateau
+  step #softcore
+    .deathskip >>Go down into Mulgore and death-skip
+  step
+    .goto Mulgore,42.2,27.7,5 >>Discover Wildmane Water Well before heading into Thunder Bluff
+  step
+    .zone Thunder Bluff >>Take the lift up into Thunder Bluff
+  step
+    .goto Thunder Bluff,38.1,56.1
+    .target Eylah Sunhorn
+    >>Talk to |cRXP_FRIENDLY_Eylah Sunhorn|r
+    .accept 97485 >>Accept Traditions of the Bluff
+  step
+    .goto Thunder Bluff,43.7,45.0
+    .target Mahu
+    >>Talk to |cRXP_FRIENDLY_Mahu|r
+    >>|cRXP_BUY_Buy|r |cRXP_LOOT_Sinew Thread|r
+  step
+    .goto Thunder Bluff,45.4,38.6
+    .target Nata Dawnstrider
+    >>Talk to |cRXP_FRIENDLY_Nata Dawnstrider|r
+    >>|cRXP_BUY_Buy a|r |cRXP_LOOT_Bundle of Dried Cedar Twigs|r
+  step
+    .goto Thunder Bluff,49.3,39.6
+    .target Nida Winterhoof
+    >>Talk to |cRXP_FRIENDLY_Nida Winterhoof|r
+    >>|cRXP_BUY_Buy a|r |cRXP_LOOT_Bundle of Herbs|r
+  step
+    .goto Thunder Bluff,51.4,52.4
+    .target Naal Mistrunner
+    >>Talk to |cRXP_FRIENDLY_Naal Mistrunner|r on the upper rise
+    >>|cRXP_BUY_Buy|r |cRXP_LOOT_Ceremonial Flint and Tinder|r
+  step
+    >>Combine the four items into |cRXP_LOOT_Prepared Incense|r
+    .complete 97485,1
+  step
+    .goto Thunder Bluff,53.3,87.9
+    >>Use the |cRXP_LOOT_Prepared Incense|r at the ceremonial site on the south cliff of Hunter Rise
+    .use 278078
+    .complete 97485,2
+  step
+    .goto Thunder Bluff,38.1,56.1
+    .target Eylah Sunhorn
+    >>Talk to |cRXP_FRIENDLY_Eylah Sunhorn|r
+    .turnin 97485 >>Turn in Traditions of the Bluff
+    >>LEVEL 4
+  step
+    .train 8613,3 -- Skinning Trained
+    .goto Thunder Bluff,40.1,62.8
+    .target Shadi Mistrunner
+    >>Talk to |cRXP_FRIENDLY_Shadi Mistrunner|r
+    .collect 7005,1 >>[OPTIONAL]: |cRXP_BUY_Buy a|r |cRXP_LOOT_Skinning Knife|r
+  step
+    .hs >>Hearth to Bloodhoof Village, or Razor Hill if you set your Hearthstone there
+  step << Tauren
+    .goto Mulgore,46.93,64.75
+    .target Kaga Wildhoof
+    >>Talk to |cRXP_FRIENDLY_Kaga Wildhoof|r near Bloodhoof Village
+    .accept 96605 >>Accept The Great Outdoors
+  step << Tauren
+    .goto Mulgore,46.93,64.75
+    .complete 96605,1
+    .complete 96605,2
+    >>Sit beside the campfire and wait for the Boosted Rest buff
+  step << Tauren
+    .goto Mulgore,46.93,64.75
+    .target Kaga Wildhoof
+    >>Talk to |cRXP_FRIENDLY_Kaga Wildhoof|r
+    .turnin 96605 >>Turn in The Great Outdoors
+    >>This should finish the route at about level 4
+  step
+    >>Optional cleanup: train available Class skills
+    >>Continue leveling however you prefer!
+]])
