@@ -248,132 +248,121 @@ RXPGuides.RegisterGuide([[
   step << Tauren
     #sticky
     +This is 1-4 Horde Exploration Route beginning with the Tauren starting zone
+    >>Keep moving the whole route so you don't lose your |cRXP_WARN_Plainsrunning|r stacks
     >>Shoutout to Rothie Forever for inspiring this guide
     .link https://www.youtube.com/watch?v=9SgC1a4E1Vs >> CLICK HERE for Video reference guide
   step << !Tauren
     #sticky
     +This is 1-4 Horde Exploration Route beginning in Mulgore
     >>Shoutout to Rothie Forever for inspiring this guide
-    .link https://www.youtube.com/watch?v=9SgC1a4E1Vs >> CLICK HERE for Video reference guide
+    .link https://www.youtube.com/watch?v=9SgC1a4E1Vs >> CLICK HERE for Video reference guide    
   step << Tauren
-    #sticky
-    >>Keep moving the whole route so you don't lose your |cRXP_WARN_Plainsrunning|r stacks
-  step << Tauren
-    .goto Mulgore,44.18,76.07
+    .goto Mulgore,43.93,76.70
     .target Chief Hawkwind
-    >>Unequip your starting clothes, then talk to |cRXP_FRIENDLY_Chief Hawkwind|r inside the tent
+    >>Talk to |cRXP_FRIENDLY_Chief Hawkwind|r inside the tent
     .accept 752 >>Accept A Humble Task
   step << Tauren
-    .goto Mulgore,45.30,76.52
-    .target Kawnie Softbreeze
-    >>Talk to |cRXP_FRIENDLY_Kawnie Softbreeze|r
-    .vendor >>Sell your starting clothes
-  step << Tauren
-    .goto Mulgore,50.03,81.16
+    .goto Mulgore,48.75,80.87
     .target Greatmother Hawkwind
     >>Talk to |cRXP_FRIENDLY_Greatmother Hawkwind|r by the well
     .turnin 752 >>Turn in A Humble Task
     >>Choose whichever gathering profession book you like. |cRXP_WARN_Skinning is recommended for early gold|r
   step << Tauren
-    #completewith next
     .itemcount 247846,1 -- Pelt Collecting for Beginners
     .train 8613 >>Use |T4624731:0|t[Pelt Collecting for Beginners] to learn Skinning
     .use 247846
   step << Tauren
-    #completewith next
     .itemcount 247840,1 -- Mining for Dummies
     .train 2575 >>Use |T4625105:0|t[Mining for Dummies] to learn Mining
     .use 247840
   step << Tauren
-    #completewith next
     .itemcount 247841,1 -- Wild Harvest
     .train 2366 >>Use |T4624731:0|t[Wild Harvest] to learn Herbalism
     .use 247841
   step << Tauren
-    .goto Mulgore,38.51,81.54
+    .goto Mulgore,39.20,81.27
     .target Antur Fallow
     >>Talk to |cRXP_FRIENDLY_Antur Fallow|r on your way out of the starting area
     .accept 1656 >>Accept A Task Unfinished
   step #softcore << Tauren
-    .deathskip >>Run or death-skip to Bloodhoof Village. Death-skipping is a few seconds faster
-  step << Tauren
-    .goto Mulgore,46.0,60.8,5 >>Discover Bloodhoof Village
+    .deathskip >>Run or death-skip to Bloodhoof Village
   step << !Tauren
     .goto Mulgore,46.0,60.8,5 >>Travel to Mulgore and discover Bloodhoof Village
   step
-    .goto Mulgore,46.63,61.09
+    .goto Mulgore,45.95,64.11
     .target Innkeeper Kauth
     >>Talk to |cRXP_FRIENDLY_Innkeeper Kauth|r in the tavern
     .turnin 1656 >>Turn in A Task Unfinished << Tauren
     .home >>Set your Hearthstone to Bloodhoof Village
   step
     >>Follow the road east
-    .goto Mulgore,60.2,65.8,5 >>Discover The Rolling Plains
+    .goto Mulgore,60.69,66.06,5 >>Discover The Rolling Plains
   step
-    .goto Mulgore,63.3,64.7,5 >>Discover Galak Camp before you get into the Barrens
+    .goto Mulgore,63.27,65.28,5 >>Discover Galak Camp before you get into the Barrens
   step
     >>Follow the road into The Barrens
-    .goto The Barrens,43.8,58.2,5 >>Discover Camp Taurajo
+    .goto The Barrens,43.98,58.73,5 >>Discover Camp Taurajo
   step
-    .goto The Barrens,44.0,57.5,5 >>Discover Agama'gor
+    .goto The Barrens,44.16,56.87,5 >>Discover Agama'gor
   step
     .goto The Barrens,44.45,59.16
     .target Omusa Thunderhorn
     .fp Camp Taurajo >>Get the Camp Taurajo flight path
   step
     >>Move south along the road. |cRXP_WARN_Be wary of the enemies, don't walk close to the Thunder Lizards|r
-    .goto The Barrens,46.2,69.7,5 >>Discover Field of Giants
+    .goto The Barrens,46.48,70.07,5 >>Discover Field of Giants
   step
-    .goto The Barrens,45.1,85.9,5 >>Discover Bael Modan
+    .goto The Barrens,46.48,84.22,5 >>Discover Bael Modan
   step
-    .goto The Barrens,44.7,87.3,5 >>Discover Razorfen Downs
+    .goto The Barrens,44.76,87.28,5 >>Discover Razorfen Downs
   step
     .goto The Barrens,44.2,89.2,5 >>Discover Blackthorn Ridge
   step
-    .goto The Barrens,44.0,90.0,5 >>Discover Razorfen Kraul
+    .goto The Barrens,,43.97,89.57,5 >>Discover Razorfen Kraul
   step
-    .goto Thousand Needles,32.1,21.6,5 >>Discover The Great Lift
+    .goto Thousand Needles,32.21,21.72,5 >>Discover The Great Lift
   step #softcore
+    >>Turn around and make sure you are back in the Barrens
     .deathskip >>Death-skip back north to Camp Taurajo
   step
     >>Head north along the road
-    .goto The Barrens,49.5,51.8,5 >>Don't miss Bramblescar
+    .goto The Barrens,50.2,52.1,5 >>Discover Bramblescar
   step #softcore
     .deathskip >>Death-skip after you cross the bridge to the north
   step
-    .goto The Barrens,51.9,30.5,5 >>Discover The Crossroads
-  step
     .goto The Barrens,51.50,30.34
     .target Devrak
-    .fp The Crossroads >>Get The Crossroads flight path
+    .fp The Crossroads >>Discover The Crossroads and get the flight path
   step
     >>Head northeast
     .goto The Barrens,53.1,26.5,5 >>Discover Thorn Hill
   step
-    .goto The Barrens,53.6,21.8,5 >>Discover Grol'dom Farm
+    .goto The Barrens,54.2,21.8,5 >>Discover Grol'dom Farm
   step
     >>Turn west and go up the hill
-    .goto The Barrens,49.0,20.3,5 >>Discover Dreadmist Peak
+    .goto The Barrens,49.4,20.7,5 >>Discover Dreadmist Peak
   step
+    >>Continue over the top of the hill
+    .goto The Barrens,48.5,20.1,10,0
     .goto The Barrens,46.0,22.4,5 >>Discover The Forgotten Pools
   step #softcore
     .deathskip >>Death-skip back to The Crossroads
   step
     >>Head east toward the coast
-    .goto The Barrens,59.8,38.8,5 >>Discover Ratchet
-    >>LEVEL 3
+    .goto The Barrens,59.98,38.71,5 >>Discover Ratchet
   step
-    .goto The Barrens,62.7,40.0,5 >>Discover The Merchant Coast
+    .goto The Barrens,62.85,40.74,5 >>Discover The Merchant Coast
   step
     .goto The Barrens,63.09,37.16
     .target Bragok
     .fp Ratchet >>Get the Ratchet flight path
+  step
+    >>Cross the river into Durotar
+    .goto Durotar,38.9,71.3,5 >>Discover Southfury River
   step #softcore
-    .deathskip >>Cross the river into Durotar, then death-skip to Sen'jin Village
+    .deathskip >>Death-skip to Sen'jin Village
   step
-    .goto Durotar,57.9,74.8,5 >>Discover Sen'jin Village
-  step
-    .goto Durotar,58.6,77.5,5 >>Discover Echo Isles
+    .goto Durotar,58.8,77.6,5 >>Discover Echo Isles
   step
     >>Head back to the road
     .goto Durotar,52.06,68.30
@@ -382,18 +371,15 @@ RXPGuides.RegisterGuide([[
     .accept 2161 >>Accept A Peon's Burden
   step
     >>Follow the road north, then cut east
-    .goto Durotar,55.0,57.0,5 >>Discover Tiragarde Keep
+    .goto Durotar,55.2,57.9,5 >>Discover Tiragarde Keep
   step
-    .goto Durotar,52.1,42.8,5 >>Discover Razor Hill
+    .goto Durotar,52.5,44.3,5 >>Discover Razor Hill
   step
     .goto Durotar,51.51,41.64
     .target Innkeeper Grosk
     >>Talk to |cRXP_FRIENDLY_Innkeeper Grosk|r in the inn
     .turnin 2161 >>Turn in A Peon's Burden
-  step
-    .goto Durotar,51.51,41.64
-    .target Innkeeper Grosk
-    .home >>[OPTIONAL]: Set your Hearthstone to Razor Hill
+    
   step
     >>Head northwest
     .goto Durotar,45.8,37.8,5 >>Discover Razormane Grounds
