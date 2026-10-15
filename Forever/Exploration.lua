@@ -379,14 +379,13 @@ RXPGuides.RegisterGuide([[
     .target Innkeeper Grosk
     >>Talk to |cRXP_FRIENDLY_Innkeeper Grosk|r in the inn
     .turnin 2161 >>Turn in A Peon's Burden
-    
   step
     >>Head northwest
-    .goto Durotar,45.8,37.8,5 >>Discover Razormane Grounds
+    .goto Durotar,46.00,39.01,5 >>Discover Razormane Grounds
   step
-    .goto Durotar,40.9,30.0,5 >>Discover Thunder Ridge
+    .goto Durotar,41.62,30.64,5 >>Discover Thunder Ridge
   step #softcore
-    .deathskip >>Death-skip after discovering Thunder Ridge to the graveyard outside Orgrimmar
+    .deathskip >>Jump down and Death-skip to the graveyard outside Orgrimmar
   step
     .goto Orgrimmar,45.12,63.89
     .target Doras
@@ -397,49 +396,50 @@ RXPGuides.RegisterGuide([[
     >>|cRXP_WARN_Watch out for enemy patrols|r
     .goto The Barrens,62.3,4.7,5 >>Discover Boulder Lode Mine
   step #softcore
-    .deathskip >>Death-skip after discovering Boulder Lode Mine back to The Crossroads
+    .deathskip >>Death-skip back to The Crossroads
   step
     >>Follow the road west toward Stonetalon Mountains
-    .goto The Barrens,40.0,29.9,5 >>Discover Honor's Stand
+    .goto The Barrens,39.46,29.78,5 >>Discover Honor's Stand
   step
     >>Go west into Stonetalon Mountains
-    .goto Stonetalon Mountains,73.6,97.2,5 >>Discover Malaka'jin
+    .goto Stonetalon Mountains,74.4,96.8,5 >>Discover Malaka'jin
   step
     >>Go up the small path, drop down, and immediately go up again
-    .goto Mulgore,38.4,14.8,5 >>Discover Skywatcher Plateau
+    .goto Mulgore,38.6,14.0,5 >>Discover Skywatcher Plateau
   step #softcore
-    .deathskip >>Go down into Mulgore and death-skip
+    .deathskip >>Go down into Mulgore and death-skip to Thunder Bluff
   step
-    .goto Mulgore,42.2,27.7,5 >>Discover Wildmane Water Well before heading into Thunder Bluff
+    .goto Mulgore,42.2,26.9,5 >>Discover Wildmane Water Well before heading into Thunder Bluff
   step
-    .zone Thunder Bluff >>Take the lift up into Thunder Bluff
+    .goto Thunder Bluff,55.0,26.6,5 >>Take the lift up into Thunder Bluff
   step
-    .goto Thunder Bluff,38.1,56.1
+    .goto Thunder Bluff,38.2,56.1
     .target Eylah Sunhorn
     >>Talk to |cRXP_FRIENDLY_Eylah Sunhorn|r
     .accept 97485 >>Accept Traditions of the Bluff
   step
     .goto Thunder Bluff,43.7,45.0
     .target Mahu
-    >>Talk to |cRXP_FRIENDLY_Mahu|r
-    >>|cRXP_BUY_Buy|r |cRXP_LOOT_Sinew Thread|r
+    >>Buy |cRXP_LOOT_Sinew Thread|r from |cRXP_FRIENDLY_Mahu|r
+    .collect 278081,1,97485,1
   step
     .goto Thunder Bluff,45.4,38.6
     .target Nata Dawnstrider
-    >>Talk to |cRXP_FRIENDLY_Nata Dawnstrider|r
-    >>|cRXP_BUY_Buy a|r |cRXP_LOOT_Bundle of Dried Cedar Twigs|r
+    >>Buy a |cRXP_LOOT_Bundle of Dried Cedar Twigs|r |cRXP_FRIENDLY_Nata Dawnstrider|r
+    .collect 278080,1,97485,1
   step
     .goto Thunder Bluff,49.3,39.6
     .target Nida Winterhoof
-    >>Talk to |cRXP_FRIENDLY_Nida Winterhoof|r
-    >>|cRXP_BUY_Buy a|r |cRXP_LOOT_Bundle of Herbs|r
+    >>Buy a |cRXP_LOOT_Bundle of Herbs|r from |cRXP_FRIENDLY_Nida Winterhoof|r
+    .collect 278079,1,97485,1
   step
-    .goto Thunder Bluff,51.4,52.4
+    .goto Thunder Bluff,50.91,52.13
     .target Naal Mistrunner
-    >>Talk to |cRXP_FRIENDLY_Naal Mistrunner|r on the upper rise
-    >>|cRXP_BUY_Buy|r |cRXP_LOOT_Ceremonial Flint and Tinder|r
+    >>Buy |cRXP_LOOT_Ceremonial Flint and Tinder|r from |cRXP_FRIENDLY_Naal Mistrunner|r on the upper rise
+    .collect 278083,1,97485,1
   step
     >>Combine the four items into |cRXP_LOOT_Prepared Incense|r
+    .use 278083
     .complete 97485,1
   step
     .goto Thunder Bluff,53.3,87.9
@@ -451,17 +451,16 @@ RXPGuides.RegisterGuide([[
     .target Eylah Sunhorn
     >>Talk to |cRXP_FRIENDLY_Eylah Sunhorn|r
     .turnin 97485 >>Turn in Traditions of the Bluff
-    >>LEVEL 4
   step
     .train 8613,3 -- Skinning Trained
     .goto Thunder Bluff,40.1,62.8
     .target Shadi Mistrunner
-    >>Talk to |cRXP_FRIENDLY_Shadi Mistrunner|r
-    .collect 7005,1 >>[OPTIONAL]: |cRXP_BUY_Buy a|r |cRXP_LOOT_Skinning Knife|r
-  step
-    .hs >>Hearth to Bloodhoof Village, or Razor Hill if you set your Hearthstone there
+    >>[OPTIONAL]: Buy a |cRXP_LOOT_Skinning Knife|r from |cRXP_FRIENDLY_Shadi Mistrunner|r
+    .collect 7005,1 -- Skinning Knife (1)
   step << Tauren
-    .goto Mulgore,46.93,64.75
+    .hs >>Hearth to Bloodhoof Village
+  step << Tauren
+    .goto Mulgore,46.2,67.2
     .target Kaga Wildhoof
     >>Talk to |cRXP_FRIENDLY_Kaga Wildhoof|r near Bloodhoof Village
     .accept 96605 >>Accept The Great Outdoors
@@ -475,8 +474,8 @@ RXPGuides.RegisterGuide([[
     .target Kaga Wildhoof
     >>Talk to |cRXP_FRIENDLY_Kaga Wildhoof|r
     .turnin 96605 >>Turn in The Great Outdoors
-    >>This should finish the route at about level 4
   step
+    >>This should finish the route at about level 4
     >>Optional cleanup: train available Class skills
     >>Continue leveling however you prefer!
 ]])
