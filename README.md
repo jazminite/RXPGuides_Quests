@@ -5,6 +5,7 @@ The guides in this addon require [RestedXP's][1] base addon. RestedXP's base add
 
 ### WoW Forever
 - Alliance 1-5 Exploration Route (Human starting zone)
+- Horde 1-4 Exploration Route (Tauren starting zone)
 - Cozy Sleeping Bag route for Alliance & Horde
 
 ### Season of Discovery Quest Stacking

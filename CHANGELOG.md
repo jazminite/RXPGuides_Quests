@@ -1,6 +1,9 @@
 # Changelog
 
 ## Versions
+### 2.2.0
+- Add Horde 1-4 Exploration Route (Tauren starting zone)
+
 ### 2.1.0
 - Add Alliance 1-5 Exploration Route (Human starting zone)
 
