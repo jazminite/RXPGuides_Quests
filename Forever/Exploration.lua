@@ -241,8 +241,8 @@ RXPGuides.RegisterGuide([[
 RXPGuides.RegisterGuide([[
   #forever
   << Horde
-  #name 1-4 Horde Exploration Route
-  #version 1
+  #name 1-4 Horde Exploration Route (Tauren)
+  #version 2
   #group Forever Quests for RXP
 
   step << Tauren
@@ -318,7 +318,7 @@ RXPGuides.RegisterGuide([[
   step
     .goto The Barrens,44.2,89.2,5 >>Discover Blackthorn Ridge
   step
-    .goto The Barrens,,43.97,89.57,5 >>Discover Razorfen Kraul
+    .goto The Barrens,43.97,89.57,5 >>Discover Razorfen Kraul
   step
     .goto Thousand Needles,32.21,21.72,5 >>Discover The Great Lift
   step #softcore
@@ -471,6 +471,263 @@ RXPGuides.RegisterGuide([[
     >>Sit beside the campfire and wait for the Boosted Rest buff
   step << Tauren
     .goto Mulgore,46.93,64.75
+    .target Kaga Wildhoof
+    >>Talk to |cRXP_FRIENDLY_Kaga Wildhoof|r
+    .turnin 96605 >>Turn in The Great Outdoors
+  step
+    >>This should finish the route at about level 4
+    >>Optional cleanup: train available Class skills
+    >>Continue leveling however you prefer!
+]])
+
+RXPGuides.RegisterGuide([[
+  #forever
+  << Horde
+  #name 1-4 Horde Exploration Route (Undead)
+  #version 1
+  #group Forever Quests for RXP
+
+  step << Undead
+    #sticky
+    +This is 1-4 Undead Exploration Route beginning with the Undead starting zone and ending in Mulgore
+    >>Shoutout to Rothie Forever for inspiring this guide
+    .link https://www.youtube.com/watch?v=9muk-se409A >> CLICK HERE for Video reference guide
+  step << !Undead
+    #sticky
+    +This is 1-4 Undead Exploration Route beginning in Tirisfal Glades and ending in Mulgore
+    >>Shoutout to Rothie Forever for inspiring this guide
+    .link https://www.youtube.com/watch?v=9muk-se409A >> CLICK HERE for Video reference guide
+  step << Undead
+    .goto Tirisfal Glades,30.22,71.65
+    .target Undertaker Mordo
+    >>Talk to |cRXP_FRIENDLY_Undertaker Mordo|r
+    .accept 363 >>Accept Rude Awakening
+  step << Undead
+    .goto Tirisfal Glades,30.84,66.20
+    .target Shadow Priest Sarvis
+    >>Talk to |cRXP_FRIENDLY_Shadow Priest Sarvis|r
+    .turnin 363 >>Turn in Rude Awakening
+  step
+    .goto Tirisfal Glades,38.24,56.77
+    .target Calvin Montague
+    >>Leave the starting area and talk to |cRXP_FRIENDLY_Calvin Montague|r at the exit
+    .accept 8 >>Accept A Rogue's Deal
+  step
+    .goto Tirisfal Glades,38.74,53.16,5 >>Discover Solliden Farmstead
+  step
+    .goto Tirisfal Glades,42.58,55.75,5 >>Discover Nightmare Vale
+  step
+    .goto Tirisfal Glades,46.85,56.51,5 >>Discover Stillwater Pond
+  step
+    .goto Tirisfal Glades,51.11,57.32,5 >>Discover Cold Hearth Manor
+  step #softcore
+    .deathskip >>Death-skip to Brill
+  step
+    .goto Tirisfal Glades,61.71,52.06
+    .target Innkeeper Renee
+    >>Discover Brill and talk to |cRXP_FRIENDLY_Innkeeper Renee|r in the inn
+    .turnin 8 >>Turn in A Rogue's Deal
+  step
+    >>Head north
+    .goto Tirisfal Glades,59.46,38.89,5 >>Discover Garren's Haunt
+  step
+    >>Head east towards the lake
+    .goto Tirisfal Glades,64.52,44.14,5 >>Discover Brightwater Lake
+  step #softcore
+    >>Continue east all the way across the lake
+    .deathskip >>Death-skip to Faol's Rest
+  step
+    >>Head north
+    .goto Tirisfal Glades,78.57,37.82,5 >>Discover Scarlet Watch Post
+  step
+    >>Head south
+    .goto Tirisfal Glades,82.08,47.57,5 >>Discover Venomweb Vale
+  step #softcore
+    .deathskip >>Death-skip again
+  step
+    >>Head southwest toward the Zeppelins
+    .goto Tirisfal Glades,74.58,53.19,5 >>Discover Crusader Outpost
+  step
+    .goto Tirisfal Glades,74.56,57.47,5 >>Discover Balnir Farmstead
+  step
+    >>Head towards Undercity
+    .goto Tirisfal Glades,63.16,61.73,5 >>Discover the Ruins of Lordaeron
+  step
+    .goto Tirisfal Glades,60.7,58.7
+    .zone Durotar >>Go up the Zeppelin tower and take the Zeppelin to Durotar
+  step
+    >>Jump off the Zeppelin early
+    .goto Durotar,55.22,13.10,5 >>Discover Skull Rock
+  step
+    >>Head south
+    .goto Durotar,54.58,28.51,5 >>Discover Drygulch Ravine
+  step #softcore
+    >>Head South
+    .deathskip >>Death-skip to Razor Hill
+  step
+    >>Head south
+    .goto Durotar,54.99,57.61,5 >>Discover Tiragarde Keep
+  step
+    .goto Durotar,56.14,72.46,5 >>Discover Sen'jin Village
+  step
+    .goto Durotar,58.84,77.09,5 >>Discover Echo Isles
+  step
+    >>Head back to the road
+    .goto Durotar,52.06,68.30
+    .target Ukor
+    >>Talk to |cRXP_FRIENDLY_Ukor|r before heading back north
+    .accept 2161 >>Accept A Peon's Burden
+  step #softcore
+    >>Follow the road North until you are near Tiragarde Keep
+    .deathskip >>Death-skip to Razor Hill
+  step
+    .goto Durotar,51.51,41.64
+    .target Innkeeper Grosk
+    >>Talk to |cRXP_FRIENDLY_Innkeeper Grosk|r in the inn
+    .turnin 2161 >>Turn in A Peon's Burden
+  step
+    >>Head northwest
+    .goto Durotar,46.00,39.01,5 >>Discover Razormane Grounds
+  step
+    .goto Durotar,41.62,30.64,5 >>Discover Thunder Ridge
+  step #softcore
+    .deathskip >>Jump down and death-skip to the graveyard outside Orgrimmar
+  step
+    .goto Orgrimmar,45.12,63.89
+    .target Doras
+    .fp Orgrimmar >>Head into Orgrimmar and get the Orgrimmar flight path
+  step
+    .zone The Barrens >>Head out the back entrance of Orgrimmar into The Barrens
+  step
+    >>|cRXP_WARN_Be wary of the Hyena on the path|r
+    >>Move up the little path
+    .goto The Barrens,62.3,4.7,5 >>Discover Boulder Lode Mine
+  step #softcore
+    .deathskip >>Death-skip to The Crossroads
+  step
+    .goto The Barrens,51.50,30.34
+    .target Devrak
+    .fp The Crossroads >>Discover The Crossroads and get the flight path
+  step
+    >>Head northeast
+    .goto The Barrens,53.1,26.5,5 >>Discover Thorn Hill
+  step #softcore
+    .deathskip >>Die again and death-skip back to The Crossroads
+  step
+    >>Head south along the road
+    .goto The Barrens,48.38,37.90,5 >>Discover Lushwater Oasis on the right
+  step
+    >>Continue south into the Southern Barrens
+    .goto The Barrens,52.70,50.82,5 >>Discover Bramblescar
+  step #softcore
+    .deathskip >>Death-skip to Camp Taurajo
+  step
+    .goto The Barrens,44.45,59.16
+    .target Omusa Thunderhorn
+    .fp Camp Taurajo >>Discover Camp Taurajo and get the flight path
+  step
+    >>Head north
+    .goto The Barrens,44.16,56.87,5 >>Discover Agama'gor
+  step
+    >>Head west into Mulgore
+    .goto Mulgore,64.45,64.35,5 >>Discover Galak Camp
+  step
+    .goto Mulgore,60.69,66.06,5 >>Discover The Rolling Plains
+  step #softcore
+    .deathskip >>Death-skip to Bloodhoof Village
+  step
+    .goto Mulgore,45.95,64.11
+    .target Innkeeper Kauth
+    >>Discover Bloodhoof Village and talk to |cRXP_FRIENDLY_Innkeeper Kauth|r in the tavern
+    .home >>Set your Hearthstone to Bloodhoof Village
+  step
+    .goto Mulgore,46.66,63.44
+    .target Baine Bloodhoof
+    >>Talk to |cRXP_FRIENDLY_Baine Bloodhoof|r
+    .accept 767 >>Accept Rite of Vision
+  step
+    .goto Mulgore,47.0,60.9
+    .target Zarlman Two-Moons
+    >>Talk to |cRXP_FRIENDLY_Zarlman Two-Moons|r
+    .turnin 767 >>Turn in Rite of Vision
+  step
+    >>Head north
+    .goto Mulgore,50.81,52.70,5 >>Discover Ravaged Caravan
+  step
+    .goto Mulgore,48.2,50.0,5 >>Discover The Golden Plains
+  step
+    >>Head towards Thunder Bluff
+    .goto Mulgore,44.04,53.11,5 >>Discover Thunderhorn Water Well
+  step
+    .goto Thunder Bluff,32.04,66.87,5 >>Take the lift up into Thunder Bluff
+  step
+    .goto Thunder Bluff,38.2,56.1
+    .target Eylah Sunhorn
+    >>Talk to |cRXP_FRIENDLY_Eylah Sunhorn|r
+    .accept 97485 >>Accept Traditions of the Bluff
+  step
+    .goto Thunder Bluff,43.7,45.0
+    .target Mahu
+    >>Sell some food/water, then buy |cRXP_LOOT_Sinew Thread|r from |cRXP_FRIENDLY_Mahu|r
+    .collect 278081,1,97485,1
+  step
+    .goto Thunder Bluff,45.4,38.6
+    .target Nata Dawnstrider
+    >>Buy a |cRXP_LOOT_Bundle of Dried Cedar Twigs|r from |cRXP_FRIENDLY_Nata Dawnstrider|r
+    .collect 278080,1,97485,1
+  step
+    .goto Thunder Bluff,49.3,39.6
+    .target Nida Winterhoof
+    >>Buy a |cRXP_LOOT_Bundle of Herbs|r from |cRXP_FRIENDLY_Nida Winterhoof|r
+    .collect 278079,1,97485,1
+  step
+    .goto Thunder Bluff,47.00,49.82
+    .target Tal
+    .fp Thunder Bluff >>Get the Thunder Bluff flight path
+  step
+    .goto Thunder Bluff,50.91,52.13
+    .target Naal Mistrunner
+    >>Buy |cRXP_LOOT_Ceremonial Flint and Tinder|r from |cRXP_FRIENDLY_Naal Mistrunner|r on the upper rise
+    .collect 278083,1,97485,1
+  step
+    >>Combine the four items into |cRXP_LOOT_Prepared Incense|r
+    .use 278083
+    .complete 97485,1
+  step
+    .goto Thunder Bluff,53.3,87.9
+    >>Use the |cRXP_LOOT_Prepared Incense|r at the ceremonial site on the south cliff of Hunter Rise
+    .use 278078
+    .complete 97485,2
+  step
+    .goto Thunder Bluff,38.2,56.1
+    .target Eylah Sunhorn
+    >>Talk to |cRXP_FRIENDLY_Eylah Sunhorn|r
+    .turnin 97485 >>Turn in Traditions of the Bluff
+  step
+    .goto Thunder Bluff,40.1,62.8
+    .target Shadi Mistrunner
+    >>[OPTIONAL]: Buy a |cRXP_LOOT_Skinning Knife|r from |cRXP_FRIENDLY_Shadi Mistrunner|r
+    >>Herbalism or Mining are also good picks for early gold. You can drop them later
+    .collect 7005,1 -- Skinning Knife (1)
+  step << Paladin
+    .goto Thunder Bluff,25.4,14.5
+    .target Alodan the Hopeful
+    >>Talk to |cRXP_FRIENDLY_Alodan the Hopeful|r on Spirit Rise
+    .trainer >>Train your class spells
+  step
+    .hs >>Hearth to Bloodhoof Village
+  step
+    .goto Mulgore,46.2,67.2
+    .target Kaga Wildhoof
+    >>Talk to |cRXP_FRIENDLY_Kaga Wildhoof|r near Bloodhoof Village
+    .accept 96605 >>Accept The Great Outdoors
+  step
+    .goto Mulgore,46.2,67.2
+    .complete 96605,1
+    .complete 96605,2
+    >>Sit beside the campfire and wait for the Boosted Rest buff
+  step
+    .goto Mulgore,46.2,67.2
     .target Kaga Wildhoof
     >>Talk to |cRXP_FRIENDLY_Kaga Wildhoof|r
     .turnin 96605 >>Turn in The Great Outdoors
