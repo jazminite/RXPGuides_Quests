@@ -3,7 +3,7 @@
 ## Title: RestedXP Quests
 ## Notes: In-game custom quest guides
 ## Author: Jazminite
-## Version: 2.2.0
+## Version: 2.3.0
 
 ## Dependencies: RXPGuides
 ## SavedVariablesPerCharacter: RXPQuestsSettings

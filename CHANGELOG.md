@@ -1,6 +1,10 @@
 # Changelog
 
 ## Versions
+### 2.3.0
+- Add Horde 1-4 Exploration Route (Undead starting zone)
+- Small fix for Tauren Guide (v2)
+
 ### 2.2.0
 - Add Horde 1-4 Exploration Route (Tauren starting zone)
 
