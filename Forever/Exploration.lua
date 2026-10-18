@@ -2,17 +2,12 @@ RXPGuides.RegisterGuide([[
   #forever
   << Alliance
   #name 1-5 Alliance Exploration Route
-  #version 1
+  #version 2
   #group Forever Quests for RXP
 
   step << Human
     #sticky
     +This is 1-5 Alliance Exploration Route beginning with the Human starting zone
-    >>Shoutout to Rothie Forever for inspiring this guide
-    .link https://www.youtube.com/watch?v=G5hV4ozjYl0 >> CLICK HERE for Video reference guide
-  step << !Human
-    #sticky
-    +This is 1-5 Alliance Exploration Route beginning in Elwynn Forest
     >>Shoutout to Rothie Forever for inspiring this guide
     .link https://www.youtube.com/watch?v=G5hV4ozjYl0 >> CLICK HERE for Video reference guide
   step << Human
@@ -40,23 +35,97 @@ RXPGuides.RegisterGuide([[
     .target Falkhaan Isenstrider
     >>Talk to |cRXP_FRIENDLY_Falkhaan Isenstrider|r in Northshire
     .accept 2158 >>Accept Rest and Relaxation
-  step << !Human
-    .goto Elwynn Forest,39.5,64.4
-    >>Travel to Elwynn Forest
   step << Human
     .goto Elwynn Forest,43.771,65.803
     .target Innkeeper Farley
     >>Talk to |cRXP_FRIENDLY_Innkeeper Farley|r
     .turnin 2158 >>Turn in Rest and Relaxation
+
+  step << Gnome/Dwarf
+    #sticky
+    +This is 1-5 Alliance Exploration Route beginning in the Gnome / Dwarf starting zone
+    >>Shoutout to Rothie Forever for inspiring this guide
+  step << Gnome/Dwarf
+    .goto Dun Morogh,33.82,72.23
+    .target Hands Springsprocket
+    >>Talk to |cRXP_FRIENDLY_Hands Springsprocket in Coldridge Pass
+    .accept 2160 >>Accept Supplies to Tannok
+  step << Gnome/Dwarf
+   >>Run all the way through the tunnel
+   .deathskip >>Death to Kharonos when your subzone is Dun Morogh
+  step << Gnome/Dwarf
+    .goto Dun Morogh,47.217,52.195
+    .target Tannok Frosthammer
+    >>Talk to |cRXP_FRIENDLY_Tannok Frosthammer|r in Kharanos
+    .turnin 2160 >> Turn in Supplies to Tannok
+  step << Gnome/Dwarf
+    .goto Dun Morogh,47.76,49.86,5 >>Discover Steelgrill's Depot
+  step << Gnome/Dwarf
+    >>Travel to Ironforge
+    .goto Ironforge,72.49,48.53
+    .accept 97263 >>Accept Your Package Has Arrived
+  step << Gnome/Dwarf
+    .goto Ironforge,47.21,13.87
+    .target Eldrun Stormbreaker
+    >>Talk to |cRXP_FRIENDLY_Eldrun Stormbreaker in The Forlorn Cavern
+    .turnin 97263 >> Turn in Your Package Has Arrived
+  step << Gnome/Dwarf
+    .goto Ironforge,78.00,51.40
+    .subzone 2257 >>Enter the Deeprun Tram
+   step << Gnome/Dwarf
+     .zone Stormwind City >>Take the Deeprun Tram to Stormwind
+   step << Gnome/Dwarf
+    .goto Stormwind City,62.32,67.81
+    .target Harlan Bagley
+    >>Talk to |cRXP_FRIENDLY_Harlan Bagley in Trade District
+    .accept 333 >>Accept Harlan Needs a Resupply
+  step << Gnome/Dwarf
+    .goto Stormwind City,63.82,73.54
+    .target Renato Gallina
+    >>Talk to |cRXP_FRIENDLY_Renato Gallina in Trade District
+    .accept 332 >>Accept Wine Shop Advert
+   step << Gnome/Dwarf
+    .goto Stormwind City,58.03,67.41
+    .target Rema Schneider
+    >>Talk to |cRXP_FRIENDLY_Rema Schneider in The Canals
+    .turnin 333 >> Turn in Harlan Needs a Resupply
+    .accept 334 >>Accept Package for Thurman
+  step << Gnome/Dwarf
+    .goto Stormwind City,52.58,83.40
+    .target Thurman Schneider
+    >>Talk to |cRXP_FRIENDLY_Thurman Schneider in Mage Quarter
+    .turnin 334 >> Turn in Package for Thurman
+  step << Gnome/Dwarf
+    .goto Stormwind City,60.25,76.77
+    .target Suzetta Gallina
+    >>Talk to |cRXP_FRIENDLY_Suzetta Gallina in The Canals
+    .turnin 332 >> Turn in Wine Shop Advert
+
+  step << Night Elf/Skybourne
+    #sticky
+    +This is 1-5 Alliance Exploration Route beginning in Elwynn Forest
+    >>Shoutout to Rothie Forever for inspiring this guide
+    .link https://www.youtube.com/watch?v=G5hV4ozjYl0 >> CLICK HERE for Video reference guide
+
+  step << !Human
+    .goto Stormwind City,71.33,72.30
+    .target Dungar Longdrink
+    .fp Stormwind >>Get the Stormwind flight path
   step
-    >>Exit the Goldshire Inn
-    .goto Elwynn Forest,47.04,64.54,5 >>Discover Crystal Lake
+    >>Exit the Goldshire Inn << Human
+    .zone Elwynn Forest >>Travel to Elwynn Forest << !Human
+  
+  step << !Human
+    .goto Elwynn Forest,41.65,63.69,5 >>Discover Goldshire
+
   step
-    >>Travel South
-    .goto Elwynn Forest,51.56,81.97,5 >>Discover Jerod's Landing
+    .goto Elwynn Forest,46.60,64.60,5 >>Discover Crystal Lake
+  step
+    >>Travel South along the road
+    .goto Elwynn Forest,51.57,81.91,5 >>Discover Jerod's Landing
   step
     >>Return to the Road and head Northeast
-    .goto Elwynn Forest,63.71,71.68,5 >>Discover the Tower of Azora. Continue southeast to Brackwell Pumpkin Patch.
+    .goto Elwynn Forest,63.71,71.68,5 >>Discover the Tower of Azora
   step
     >>Head Southeast
     .goto Elwynn Forest,65.78,75.33,5 >>Discover Brackwell Pumpkin Patch
@@ -65,18 +134,18 @@ RXPGuides.RegisterGuide([[
     .goto Elwynn Forest,77.12,71.29,5 >>Discover Eastvale Logging Camp
   step
     >>Follow the Road South
-    .goto Elwynn Forest,83.61,77.20,5 >>Discover Ridgepoint Tower
+    .goto Elwynn Forest,83.39,76.79,5 >>Discover Ridgepoint Tower
   step
     >>Follow the Road into Redridge Mountains
-    .goto Redridge Mountains,4.20,71.45,5 >>Discover Three Corners
+    .goto Redridge Mountains,3.43,71.22,5 >>Discover Three Corners
   step #softcore
-    .deathskip >>Die here and take the spirit resurrection
+    .deathskip >>Death Skip to Lakeshire
   step
     >>Swim across the lake to Lakeshire
     .goto Redridge Mountains,14.76,47.23,5 >>Discover Lakeshire
   step
     .goto Redridge Mountains,12.44,45.83,10,0
-    .goto Redridge Mountains,16.21,39.71,5 >>Go up the hill and Discover Redridge Canyons
+    .goto Redridge Mountains,16.05,39.93,5 >>Go up the hill and Discover Redridge Canyons
   step #softcore
     .deathskip >>Death-skip back to the Lakeshire graveyard
   step
@@ -105,7 +174,6 @@ RXPGuides.RegisterGuide([[
   step
     .goto Duskwood,76.7,64.7,5 >>Run South and Discover Tranquil Gardens Cemetery
   step
-    >>LEVEL 3
     .goto Duskwood,66.76,58.17,5 >>Follow the road, then go up the hill to Discover Brightwood Grove
   step
     .goto Duskwood,68.02,62.31,5 >>Discover The Rotting Orchard
@@ -123,33 +191,33 @@ RXPGuides.RegisterGuide([[
   step
     .zone Westfall >>Follow the Road West towards Westfall
   step
-    .goto Westfall,67.91,60.34,5 >>Follow the river North and discover The Dead Acre
+    .goto Westfall,67.70,61.13,5 >>Follow the river North and discover The Dead Acre
   step
-    .goto Duskwood,7.65,60.06,5 >>Cross the river to discover The Hushed Bank
+    .goto Duskwood,7.64,60.38,5 >>Cross the river to discover The Hushed Bank
   step
     >>Return to Westfall and travel west on left side of the road
-    .goto Westfall,66.22,64.76,5 >>Discover The Dust Plains
+    .goto Westfall,66.31,64.59,5 >>Discover The Dust Plains
   step
     >>Follow the Road West to the Dagger Hills
-    .goto Westfall,52.76,69.27,5 >>Discover Dagger Hills
+    .goto Westfall,53.20,68.81,5 >>Discover Dagger Hills
   step
     >>Follow the Mountain line
-    .goto Westfall,49.3,70.6,5 >>Discover Moonbrook
+    .goto Westfall,50.73,71.03,5 >>Discover Moonbrook
   step
     >>Follow the Mountain line
-    .goto Westfall,38.1,72.2,5 >>Discover Demont's Place
+    .goto Westfall,38.47,72.33,5 >>Discover Demont's Place
   step
     >>U-turn northeast around the hostile mobs toward Alexston Farmstead
-    .goto Westfall,34.12,62.58,5 >>Discover Alexston Farmstead
+     .goto Westfall,33.92,62.77,5 >>Discover Alexston Farmstead
   step
     >>Maneuver through the enemy mobs
-    .goto Westfall,45.38,59.81,5 >>Discover Stendel's Pond
+    .goto Westfall,44.50,60.26,5 >>Discover Stendel's Pond
   step
     >>Head North along the road
-    .goto Westfall,36.24,44.11,5 >>Discover Gold Coast Quarry
+    .goto Westfall,36.47,44.30,5 >>Discover Gold Coast Quarry
   step
     >>Continue North along the road
-    .goto Westfall,41.7,32.8,5 >>Discover The Molsen Farm
+    .goto Westfall,41.58,32.89,5 >>Discover The Molsen Farm
   step
     >>Continue North
     .goto Westfall,47.28,27.87,5 >>Discover Furlbrow's Pumpkin Farm
@@ -172,10 +240,10 @@ RXPGuides.RegisterGuide([[
     >>Return to Elwynn Forest
     .goto Elwynn Forest,21.15,79.44,5 >>Discover Forest's Edge
   step
-    .goto Elwynn Forest,25.0,76.6,5 >>Discover Westbrook Garrison on the left
+    .goto Elwynn Forest,24.91,77.29,5 >>Discover Westbrook Garrison on the left
   step
     >>Continue east and cross the river
-    .goto Elwynn Forest,29.4,80.7,5 >>Discover The Stonefield Farm then die
+    .goto Elwynn Forest,28.95,80.05,5 >>Discover The Stonefield Farm then die
   step #softcore
     .deathskip >>Die after discovering Stonefield Farm and spirt res near Goldshire
   step
