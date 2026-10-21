@@ -1,9 +1,16 @@
 # Changelog
 
 ## Versions
+### 2.3.2
+Alliance Guide (v3)
+- Add book quests
+- Add simple SW quests for Humans
+- Minor guide adjustments
+
 ### 2.3.1
-- Add Dwarf / Gnome steps to Alliance Guide (v2)
-- Minor improvements to Alliance Guide coordinates (v2)
+Alliance Guide (v2)
+- Add Dwarf / Gnome steps
+- Minor improvements coordinates
 
 ### 2.3.0
 - Add Horde 1-4 Exploration Route (Undead starting zone)

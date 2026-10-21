@@ -2,34 +2,34 @@ RXPGuides.RegisterGuide([[
   #forever
   << Alliance
   #name 1-5 Alliance Exploration Route
-  #version 2
+  #version 3
   #group Forever Quests for RXP
 
   step << Human
     #sticky
     +This is 1-5 Alliance Exploration Route beginning with the Human starting zone
     >>Shoutout to Rothie Forever for inspiring this guide
-    .link https://www.youtube.com/watch?v=G5hV4ozjYl0 >> CLICK HERE for Video reference guide
+    .link https://www.youtube.com/watch?v=G5hV4ozjYl0 >>CLICK HERE for Video reference guide
   step << Human
     .goto Elwynn Forest,48.17,42.94
     .target Deputy Willem
     >>Talk to |cRXP_FRIENDLY_Deputy Willem|r
-    .accept 783 >> Accept A Threat Within
+    .accept 783 >>Accept A Threat Within
   step << Human
     .goto Elwynn Forest,48.923,41.606
     >>Talk to |cRXP_FRIENDLY_Marshal McBride|r
-    .turnin 783 >> Turn in A Threat Within
+    .turnin 783 >>Turn in A Threat Within
     .target Marshal McBride
   step << Human
     .goto Elwynn Forest,48.171,42.943
     .target Deputy Willem
     >>Talk to |cRXP_FRIENDLY_Deputy Willem|r
-    .accept 5261 >> Accept Eagan Peltskinner
+    .accept 5261 >>Accept Eagan Peltskinner
   step << Human
     .goto Elwynn Forest,48.941,40.166
     .target Eagan Peltskinner
     >>Talk to |cRXP_FRIENDLY_Eagan Peltskinner|r
-    .turnin 5261 >> Turn in Eagan Peltskinner
+    .turnin 5261 >>Turn in Eagan Peltskinner
   step << Human
     .goto Elwynn Forest,45.6,47.7
     .target Falkhaan Isenstrider
@@ -38,8 +38,9 @@ RXPGuides.RegisterGuide([[
   step << Human
     .goto Elwynn Forest,43.771,65.803
     .target Innkeeper Farley
-    >>Talk to |cRXP_FRIENDLY_Innkeeper Farley|r
+    >>Talk to |cRXP_FRIENDLY_Innkeeper Farley|r in Goldshire
     .turnin 2158 >>Turn in Rest and Relaxation
+    .home >>Set your hearthstone to Goldshire Inn
 
   step << Gnome/Dwarf
     #sticky
@@ -57,7 +58,7 @@ RXPGuides.RegisterGuide([[
     .goto Dun Morogh,47.217,52.195
     .target Tannok Frosthammer
     >>Talk to |cRXP_FRIENDLY_Tannok Frosthammer|r in Kharanos
-    .turnin 2160 >> Turn in Supplies to Tannok
+    .turnin 2160 >>Turn in Supplies to Tannok
   step << Gnome/Dwarf
     .goto Dun Morogh,47.76,49.86,5 >>Discover Steelgrill's Depot
   step << Gnome/Dwarf
@@ -68,7 +69,7 @@ RXPGuides.RegisterGuide([[
     .goto Ironforge,47.21,13.87
     .target Eldrun Stormbreaker
     >>Talk to |cRXP_FRIENDLY_Eldrun Stormbreaker in The Forlorn Cavern
-    .turnin 97263 >> Turn in Your Package Has Arrived
+    .turnin 97263 >>Turn in Your Package Has Arrived
   step << Gnome/Dwarf
     .goto Ironforge,78.00,51.40
     .subzone 2257 >>Enter the Deeprun Tram
@@ -88,24 +89,24 @@ RXPGuides.RegisterGuide([[
     .goto Stormwind City,58.03,67.41
     .target Rema Schneider
     >>Talk to |cRXP_FRIENDLY_Rema Schneider in The Canals
-    .turnin 333 >> Turn in Harlan Needs a Resupply
+    .turnin 333 >>Turn in Harlan Needs a Resupply
     .accept 334 >>Accept Package for Thurman
   step << Gnome/Dwarf
     .goto Stormwind City,52.58,83.40
     .target Thurman Schneider
     >>Talk to |cRXP_FRIENDLY_Thurman Schneider in Mage Quarter
-    .turnin 334 >> Turn in Package for Thurman
+    .turnin 334 >>Turn in Package for Thurman
   step << Gnome/Dwarf
     .goto Stormwind City,60.25,76.77
     .target Suzetta Gallina
     >>Talk to |cRXP_FRIENDLY_Suzetta Gallina in The Canals
-    .turnin 332 >> Turn in Wine Shop Advert
+    .turnin 332 >>Turn in Wine Shop Advert
 
   step << Night Elf/Skybourne
     #sticky
     +This is 1-5 Alliance Exploration Route beginning in Elwynn Forest
     >>Shoutout to Rothie Forever for inspiring this guide
-    .link https://www.youtube.com/watch?v=G5hV4ozjYl0 >> CLICK HERE for Video reference guide
+    .link https://www.youtube.com/watch?v=G5hV4ozjYl0 >>CLICK HERE for Video reference guide
 
   step << !Human
     .goto Stormwind City,71.33,72.30
@@ -125,16 +126,18 @@ RXPGuides.RegisterGuide([[
     .goto Elwynn Forest,51.57,81.91,5 >>Discover Jerod's Landing
   step
     >>Return to the Road and head Northeast
-    .goto Elwynn Forest,63.71,71.68,5 >>Discover the Tower of Azora
+    .goto Elwynn Forest,65.44,70.05
+    >>Climb to the middle of the Tower of Azora
+    .collect 203755,1
   step
     >>Head Southeast
-    .goto Elwynn Forest,65.78,75.33,5 >>Discover Brackwell Pumpkin Patch
+    .goto Elwynn Forest,65.54,74.94,5 >>Discover Brackwell Pumpkin Patch
   step
     >>Follow the Road
     .goto Elwynn Forest,77.12,71.29,5 >>Discover Eastvale Logging Camp
   step
     >>Follow the Road South
-    .goto Elwynn Forest,83.39,76.79,5 >>Discover Ridgepoint Tower
+    .goto Elwynn Forest,83.35,76.54,5 >>Discover Ridgepoint Tower
   step
     >>Follow the Road into Redridge Mountains
     .goto Redridge Mountains,3.43,71.22,5 >>Discover Three Corners
@@ -227,6 +230,10 @@ RXPGuides.RegisterGuide([[
   step #softcore
     .deathskip >>Death-skip to Sentinel Hill
   step
+    .goto Westfall,52.63,53.78
+    >>Go inside the Sentinel Hill Inn and grab the book
+    .collect 208860,1
+  step
     .goto Westfall,56.53,52.63
     .target Thor
     .fp Sentinel Hill >>Get the Sentinel Hill flight path
@@ -246,6 +253,44 @@ RXPGuides.RegisterGuide([[
     .goto Elwynn Forest,28.95,80.05,5 >>Discover The Stonefield Farm then die
   step #softcore
     .deathskip >>Die after discovering Stonefield Farm and spirt res near Goldshire
+  step
+    .zone Stormwind City >>Head to Stormwind
+
+  step << Human
+    .goto Stormwind City,63.82,73.54
+    .target Renato Gallina
+    >>Talk to |cRXP_FRIENDLY_Renato Gallina in Trade District
+    .accept 332 >>Accept Wine Shop Advert
+  step << Human
+    .goto Stormwind City,62.32,67.81
+    .target Harlan Bagley
+    >>Talk to |cRXP_FRIENDLY_Harlan Bagley in Trade District
+    .accept 333 >>Accept Harlan Needs a Resupply
+   step << Human
+    .goto Stormwind City,58.03,67.41
+    .target Rema Schneider
+    >>Talk to |cRXP_FRIENDLY_Rema Schneider in The Canals
+    .turnin 333 >>Turn in Harlan Needs a Resupply
+    .accept 334 >>Accept Package for Thurman
+  step << Human
+    .goto Stormwind City,60.25,76.77
+    .target Suzetta Gallina
+    >>Talk to |cRXP_FRIENDLY_Suzetta Gallina in The Canals
+    .turnin 332 >>Turn in Wine Shop Advert
+  step << Human
+    .goto Stormwind City,52.58,83.40
+    .target Thurman Schneider
+    >>Talk to |cRXP_FRIENDLY_Thurman Schneider in Mage Quarter
+    .turnin 334 >>Turn in Package for Thurman
+
+  step
+    .goto Stormwind City,48.98,86.39
+    .target Garion Wendell
+    >>Talk to |cRXP_FRIENDLY_Garion Wendell|r in Wizard's Sanctum
+    .turnin 79092 >>Turn in Archmage Theocritus' Research Journal
+    .turnin 79093 >>Turn in Rumi of Gnomeregan: The Collected Works
+  step
+    .hs >>Hearth or walk back to Goldshire
   step
     .goto Elwynn Forest,42.1,65.9
     .target Marshal Dughan
