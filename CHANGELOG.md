@@ -10,7 +10,7 @@ Alliance Guide (v3)
 ### 2.3.1
 Alliance Guide (v2)
 - Add Dwarf / Gnome steps
-- Minor improvements coordinates
+- Minor improvements to coordinates
 
 ### 2.3.0
 - Add Horde 1-4 Exploration Route (Undead starting zone)
