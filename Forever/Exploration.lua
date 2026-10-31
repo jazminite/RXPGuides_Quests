@@ -2,7 +2,7 @@ RXPGuides.RegisterGuide([[
   #forever
   << Alliance
   #name 1-5 Alliance Exploration Route
-  #version 3
+  #version 4
   #group Forever Quests for RXP
 
   step << Human
@@ -30,6 +30,9 @@ RXPGuides.RegisterGuide([[
     .target Eagan Peltskinner
     >>Talk to |cRXP_FRIENDLY_Eagan Peltskinner|r
     .turnin 5261 >>Turn in Eagan Peltskinner
+  step << Human Rogue
+    .goto Elwynn Forest,50.35,39.93
+    .train 1784 >>Train Stealth
   step << Human
     .goto Elwynn Forest,45.6,47.7
     .target Falkhaan Isenstrider

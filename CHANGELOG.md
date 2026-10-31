@@ -1,6 +1,10 @@
 # Changelog
 
 ## Versions
+### 2.3.3
+Alliance Guide (v4)
+- Add Train Stealth for Rogue
+
 ### 2.3.2
 Alliance Guide (v3)
 - Add book quests
